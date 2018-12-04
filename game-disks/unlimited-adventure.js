@@ -3,7 +3,7 @@ const unlimitedAdventure = {
   inventory: [],
   rooms: [
     {
-      name: 'GAME OVER',
+      name: 'Dive',
       id: 'gameOver',
       img: `
          ~~~       ~~~
@@ -21,8 +21,11 @@ const unlimitedAdventure = {
 """""""""""""""""""""""""""""""""
       `,
       desc: `
-        Congratulations, IkariDude09! You have defeated the evil emperor Zylzyx and restored peace to the k†ngdøm.
-        You have no quests left to complete. Stay tuned for more adventures from SquigglySoft!
+Long has your heart and mind been held captive by the sea. At night for decades you have tossed and turned during sleepless nights, imagining the horror and wonder that man has yet to discover under the surface.
+
+Finally, you have been given the opportunity to explore its depths in completely uncharted territory. For your dive, you take with you a net for specimen collection and a camera to document your discoveries. 
+
+To begin, enter GO DIVE
       `,
       items: [
         { name: 'castle', desc: 'It\'s quite impressive.' },
