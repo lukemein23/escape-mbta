@@ -15,8 +15,8 @@
     "text-adventure-game",
     "repl"
   ],
-  "engines": {
-    "node": "8.x"
+  "scripts": {
+    "start": "node index.js"
   },
   "author": "Benji Kay",
   "license": "ISC",
