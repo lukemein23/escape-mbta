@@ -3,9 +3,6 @@
   "version": "1.1.1",
   "description": "A browser-based text adventure game engine",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/okaybenji/text-engine.git"
@@ -18,6 +15,9 @@
     "text-adventure-game",
     "repl"
   ],
+  "engines": {
+    "node": "8.x"
+  },
   "author": "Benji Kay",
   "license": "ISC",
   "bugs": {
