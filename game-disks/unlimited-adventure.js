@@ -1,24 +1,12 @@
 const unlimitedAdventure = {
-  roomId: 'gameOver',
+  roomId: 'diveIntro',
   inventory: [],
   rooms: [
     {
-      name: 'Dive',
-      id: 'gameOver',
+      name: 'DIVE!',
+      id: 'diveIntro',
       img: `
-         ~~~       ~~~
-           1         1
-        !!!!!!!   !!!!!!!
-        !     !   !     !
-    !!!!!  #  !!!!!  #  !!!!!
-    !   !  #  !   !  #  !   !
-    ! # !  #  !   !  #  ! # !
-    !   !     !   !     !   !
-    !   !     !###!     !   !
-    ! # ! ### !###! ### ! # !
-    ! # ! ### !###! ### ! # !
-    ! # ! ### !###! ### ! # !
-"""""""""""""""""""""""""""""""""
+
       `,
       desc: `
 Long has your heart and mind been held captive by the sea. At night for decades you have tossed and turned during sleepless nights, imagining the horror and wonder that man has yet to discover under the surface.
@@ -28,72 +16,67 @@ Finally, you have been given the opportunity to explore its depths in completely
 To begin, enter GO DIVE
       `,
       items: [
-        { name: 'castle', desc: 'It\'s quite impressive.' },
+        { name: 'net', desc: 'This needs a description',isTakeable: true },
+        { name: 'camera', desc: 'This needs a description', isTakeable: true }
       ],
       exits: [
-        { dir: 'north', id: 'endOfTheWorld' }
+        { dir: 'dive', id: 'gameStart' }
       ]
     },
     {
-      name: 'The End of the World',
-      id: 'endOfTheWorld',
+      name: 'The Ocean Depths',
+      id: 'gameStart',
       img: `
-   xx    ~~~       ~~~
-     xxxxx 1         1
-        x1!!!!! 0 !!!!!!!
-        x1    !  0000000000
-    !!xx!11#  !xx000000000000
-    ! x x11x000 00!00000!   !
-    !xxx!110  0 x !  0  ! # !
-    !   !1111 0 x !  0  !   !
-    !   0 1 1 0#x#!   00!   !
-    ! #0! #1# 0##x00011111# !
-    ! 00! #11 0000!11111!000!
-    ! # ! ### !###! 1111111100
-"""""""""""""""""""""""00000100"""""
       `,
       desc: `
-        I don't know how you got here, but you definitely don't belong here. This is the End of the World. You already saved the k†ngdøm. It's time for you to leave.
-      `,
-      items: [
-        { name: 'key', desc: 'It looks like a key.', isTakeable: true, use: ({disk, println, getRoom}) => {
-          const room = getRoom(disk.roomId);
-          const door = room.items.find(item => item.name === 'door');
-          if (door) {
-            println('The door has opened!');
-            door.isOpen = true;
-          } else {
-            println('There\'s nothing to use the key on.');
-          }
-        }},
-        { name: 'book', desc: 'It appears to contain some sort of encantation, or perhaps... code.', isTakeable: true, use: ({disk, println, getRoom}) => {
-          const room = getRoom(disk.roomId);
-          const door = room.items.find(item => item.name === 'door');
-
-          if (door) {
-            println('You already used the book!');
-            return;
-          }
-
-          println('A door has appeared from nothing! It seems to go nowhere...');
-          room.items.push({ name: 'door', desc: 'It seems to go nowhere...', isOpen: false, use: ({disk, println, enterRoom}) => {
-            const door = room.items.find(item => item.name === 'door');
-            if (door.isOpen) {
-              enterRoom('gameReallyOver');
-            } else {
-              println('The door is locked.');
-            }
-          }});
-        }},
-        { name: 'castle', desc: 'It has been... corrupted somehow.' },
+These are new and treacherous depths. The water is freezing even through your equipment, and it is difficult to see more 5 meters in front of you. Uncertainty lies in every direction, but you must start somewhere. Do you go East, West, North or South?
+      `, 
+      exits: [
+        { dir: 'east', id: 'coralReef' },
+        { dir: 'west', id: 'expanseWest' },
+        { dir: 'north', id: 'expanseNorth' },
+        { dir: 'south', id: 'coolRock' }
+        
       ]
+//       items: [
+//         { name: 'key', desc: 'It looks like a key.', isTakeable: true, use: ({disk, println, getRoom}) => {
+//           const room = getRoom(disk.roomId);
+//           const door = room.items.find(item => item.name === 'door');
+//           if (door) {
+//             println('The door has opened!');
+//             door.isOpen = true;
+//           } else {
+//             println('There\'s nothing to use the key on.');
+//           }
+//         }},
+//         { name: 'book', desc: 'It appears to contain some sort of encantation, or perhaps... code.', isTakeable: true, use: ({disk, println, getRoom}) => {
+//           const room = getRoom(disk.roomId);
+//           const door = room.items.find(item => item.name === 'door');
+
+//           if (door) {
+//             println('You already used the book!');
+//             return;
+//           }
+
+//           println('A door has appeared from nothing! It seems to go nowhere...');
+//           room.items.push({ name: 'door', desc: 'It seems to go nowhere...', isOpen: false, use: ({disk, println, enterRoom}) => {
+//             const door = room.items.find(item => item.name === 'door');
+//             if (door.isOpen) {
+//               enterRoom('gameReallyOver');
+//             } else {
+//               println('The door is locked.');
+//             }
+//           }});
+//         }},
+//         { name: 'castle', desc: 'It has been... corrupted somehow.' },
+//       ]
     },
     {
-      name: 'GAME REALLY OVER',
-      id: 'gameReallyOver',
-      img: '¯\\_(ツ)_/¯',
+      name: 'Coral Reef',
+      id: 'coralReef',
+      img: '',
       desc: `
-        That's all I've written so far! If you liked this and want more, write me on Twitter: @okaybenji
+        You approach a majestic reef made up of deep water coral. A school of luminous fish, forever untouched by the light of the sun and unseen by human eyes up until now, swim nimbly about its glorious spires.
       `,
     },
   ],
