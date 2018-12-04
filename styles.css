@@ -4,8 +4,8 @@
 }
 
 body {
-  color: #00ee00;
-  background: #111111;
+  color: white;
+  background: #3385ff;
   font-size: 2vh;
   font-family: "Apple II";
   line-height: 4vh;
@@ -34,8 +34,8 @@ body {
 #input {
   width: 98.5vw;
   height: 10vh;
-  color: #00ee00;
-  background: #111111;
+  color:  white;
+  background: #3385ff;
   position: fixed;
   bottom: 0;
   font-size: 2vh;
