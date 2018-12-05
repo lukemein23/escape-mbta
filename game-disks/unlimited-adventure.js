@@ -1,6 +1,6 @@
 const unlimitedAdventure = {
   roomId: 'diveIntro',
-  numPhotos: 0,
+  numPhotos: [],
   inventory: [        
         { name: 'net', 
            //desc: 'This needs a description',
@@ -33,8 +33,9 @@ const unlimitedAdventure = {
           }
              else if (room.id == 'ancientShark') {
             println('What a terrible decision. You ineffectually swat at the Ancient Shark of Numberless Teeth and it swallows you whole.');
-               //how to end the game with this?
-            return;
+            return
+            
+            //enterRoom('diveIntro');
               
           }
              else if (room.id == 'incomprehensibleWhale') {
@@ -50,6 +51,11 @@ const unlimitedAdventure = {
             return;
               
           }
+             else if (room.id == 'prehistoricKelpForest') {
+            println('You retrieve some prehistoric kelp. Excellent. This is a viable protein source and will make a wonderful snack later.');
+            return;
+              
+          }
              else {
              console.log(room.id)
           }
@@ -60,9 +66,8 @@ const unlimitedAdventure = {
             const room = getRoom(disk.roomId);
             if (room.id == 'gameStart') {
             println('need camera line');
-                numPhotos=numPhotos+1
-                var item = {name: 'blurry photo', numPhotos: numPhotos+1}
-                disk.inventory.push(item);
+                var item = {name: 'blurry photo'}
+                disk.numPhotos.push(item);
                 println(`You took the ${item.name}.`);
             return;
           }  else if (room.id == 'coralReef') {
@@ -96,6 +101,11 @@ const unlimitedAdventure = {
           } 
            else if (room.id == 'plasticBottle') {
             println('You now have a photo of the translucent green plastic bottle. Useful.');
+            return;
+              
+          } 
+           else if (room.id == 'prehistoricKelpForest') {
+            println('You now have a photo of the Prehistoric Kelp Forest. Perhaps it is impossible to capture, or perhaps you are a poor photographer, but this image does nothing to capture the weight or scale of the sight.');
             return;
               
           } 
@@ -187,7 +197,7 @@ Do you go East, West, North or South?
         Do you take an action here or go East, West, North or South?
       `,
       exits: [
-        { dir: 'east', id: 'noExit' },
+        //{ dir: 'east', id: 'noExit' },
         { dir: 'west', id: 'gameStart' },
         { dir: 'north', id: 'incomprehensibleWhale' },
         { dir: 'south', id: 'plasticBottle' }
@@ -206,7 +216,7 @@ Do you go East, West, North or South?
         { dir: 'east', id: 'plasticBottle' },
         { dir: 'west', id: 'prehistoricKelpForest' },
         { dir: 'north', id: 'gameStart' },
-        { dir: 'south', id: 'noExit' }
+        //{ dir: 'south', id: 'noExit' }
         
       ]
     },
@@ -221,7 +231,7 @@ Do you go East, West, North or South?
       `,
       exits: [
         { dir: 'east', id: 'gameStart' },
-        { dir: 'west', id: 'noExit' },
+        //{ dir: 'west', id: 'noExit' },
         { dir: 'north', id: 'ancientShark' },
         { dir: 'south', id: 'prehistoricKelpForest' }
         
@@ -239,7 +249,7 @@ Do you go East, West, North or South?
       exits: [
         { dir: 'east', id: 'incomprehensibleWhale' },
         { dir: 'west', id: 'ancientShark' },
-        { dir: 'north', id: 'noExit' },
+        //{ dir: 'north', id: 'noExit' },
         { dir: 'south', id: 'gameStart' }
         
       ]
@@ -272,8 +282,8 @@ Do you go East, West, North or South?
       `,
       exits: [
         { dir: 'east', id: 'expanseNorth' },
-        { dir: 'west', id: 'noExit' },
-        { dir: 'north', id: 'noExit' },
+        //{ dir: 'west', id: 'noExit' },
+        //{ dir: 'north', id: 'noExit' },
         { dir: 'south', id: 'expanseWest' }
         
       ]
@@ -287,9 +297,9 @@ Do you go East, West, North or South?
          Do you take action here or go East, West, North or South?
       `,
       exits: [
-        { dir: 'east', id: 'noExit' },
+        //{ dir: 'east', id: 'noExit' },
         { dir: 'west', id: 'expanseNorth' },
-        { dir: 'north', id: 'noExit' },
+        //{ dir: 'north', id: 'noExit' },
         { dir: 'south', id: 'coralReef' }
         
       ]
@@ -303,10 +313,27 @@ Do you go East, West, North or South?
          Do you take action here or go East, West, North or South?
       `,
       exits: [
-        { dir: 'east', id: 'noExit' },
+        //{ dir: 'east', id: 'noExit' },
         { dir: 'west', id: 'coolRock' },
         { dir: 'north', id: 'coralReef' },
-        { dir: 'south', id: 'noExit' }
+        //{ dir: 'south', id: 'noExit' }
+        
+      ]
+    },
+    {
+      name: 'Prehistoric Kelp Forest',
+      id: 'prehistoricKelpForest',
+      img: '',
+      desc: `
+         You find yourself lost in a forest of towering, anchored kelp. These must be as old or older than California’s Redwoods. The foreboding feeling you get when you try to look past the first few rows of plants reminds you of the fear you felt for the woods behind your grandparents’ house. 
+         Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'east', id: 'coolRock' },
+        //{ dir: 'west', id: 'noExit' },
+        { dir: 'north', id: 'expanseWest' },
+        //{ dir: 'south', id: 'noExit' }
         
       ]
     },

@@ -118,11 +118,14 @@ const loadDisk = (disk, config = {}) => {
             if (!disk.inventory.length) {
               println('You don\'t have any items in your inventory.')
               return;
-            }
-            println('You have the following items in your inventory:');
-            disk.inventory.forEach(item => {
-              println(`* ${item.name}`);
-            });
+            } else {
+              println('You have the following items in your inventory:');
+              disk.inventory.forEach(item => {
+                println(`* ${item.name}`);
+              })
+              if(disk.numPhotos.length){
+                println(`* ${disk.numPhotos.length} photo(s)`);
+              }}                     
           },
           look() {
             println(room.desc);
