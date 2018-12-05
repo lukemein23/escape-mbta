@@ -139,6 +139,19 @@ const loadDisk = (disk, config = {}) => {
             println('Where would you like to go? Available directions are:');
             exits.forEach(exit => println(exit.dir));
           },
+          surface(){
+            println('You have completed your dive. To show for it you have:');
+            if (disk.inventory.length){
+                disk.inventory.forEach(item => {
+                println(`* ${item.name}`);
+              })
+              if(disk.numPhotos.length){
+                println(`* ${disk.numPhotos.length} photo(s)`);
+            }}
+            println('The truly know the sea is impossible and you remain in the dark, but these are a start.');
+            document.body.innerHTML = ""
+            println('To dive again type 
+          },
           help() {
             const instructions = `
               The following commands are available:

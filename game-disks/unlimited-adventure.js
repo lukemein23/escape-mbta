@@ -380,7 +380,7 @@ Do you go East, West, North or South?
       id: 'surface',
       img: '',
       desc: 
-         'You have completed your dive. To show for it you have:' + inv() + 
+         
          'The truly know the sea is impossible and you remain in the dark, but these are a start.',
       exits: [
         { dir: 'east', id: 'coolRock' },
