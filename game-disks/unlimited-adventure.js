@@ -90,6 +90,29 @@ These are new and treacherous depths. The water is freezing even through your eq
       desc: `
         You approach a majestic reef made up of deep water coral. A school of luminous fish, forever untouched by the light of the sun and unseen by human eyes up until now, swim nimbly about its glorious spires.
       `,
+      exits: [
+        { dir: 'east', id: 'noExit' },
+        { dir: 'west', id: 'gameStart' },
+        { dir: 'north', id: 'incomprehensibleWhale' },
+        { dir: 'south', id: 'plasticBottle' }
+        
+      ]
+    },
+    {
+      name: 'Cool Rock',
+      id: 'coolRock',
+      img: '',
+      desc: `
+        You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It’s difficult to describe what makes it so cool, but it is really ultra cool, you are certain of that.
+        Do you take action here or go East, West, North or South?
+      `,
+      exits: [
+        { dir: 'east', id: 'plasticBottle' },
+        { dir: 'west', id: 'prehistoricKelpForest' },
+        { dir: 'north', id: 'gameStart },
+        { dir: 'south', id: 'noExit' }
+        
+      ]
     },
   ],
 };
