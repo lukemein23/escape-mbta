@@ -17,6 +17,22 @@ const unlimitedAdventure = {
             return;
               
           }
+             else if (room.id == 'expanseNorth') {
+            println('You swipe at the darkness and come back with nothing.');
+            return;
+              
+          }
+             else if (room.id == 'coolRock') {
+            println('You acquire the unspeakably cool rock. Hopefully it’s magnificence will resonate at home.');
+            return;
+              
+          }
+             else if (room.id == 'ancientShark') {
+            println('What a terrible decision. You ineffectually swat at the Ancient Shark of Numberless Teeth and it swallows you whole.');
+               //how to end the game with this?
+            return;
+              
+          }
              else {
              console.log(room.id)
           }
@@ -37,6 +53,21 @@ const unlimitedAdventure = {
             return;
               
           } 
+           else if (room.id == 'expanseNorth') {
+            println('need camera line');
+            return;
+              
+          } 
+           else if (room.id == 'coolRock') {
+            println('Your photo does the cool rock no justice. You really do need to see it in person to understand why it is so so cool.');
+            return;
+              
+          } 
+           else if (room.id == 'ancientShark') {
+            println('Your hands are shaky as your camera flashes. All that is captured is a blurry image of a few teeth and the suggestion of many more.');
+            return;
+              
+          } 
            else {
              console.log(room.id)
           }
@@ -50,7 +81,7 @@ const unlimitedAdventure = {
 
       `,
       desc: `
-Long has your heart and mind been held captive by the sea. At night for decades you have tossed and turned during sleepless nights, imagining the horror and wonder that man has yet to discover under the surface.
+Long have your heart and mind been held captive by the sea. For decades you have tossed and turned during sleepless nights, imagining the horror and wonder that man has yet to discover under its surface.
 
 Finally, you have been given the opportunity to explore its depths in completely uncharted territory. For your dive, you take with you a net for specimen collection and a camera to document your discoveries. 
 
@@ -162,6 +193,73 @@ Do you go East, West, North or South?
         { dir: 'west', id: 'noExit' },
         { dir: 'north', id: 'ancientShark' },
         { dir: 'south', id: 'prehistoricKelpForest' }
+        
+      ]
+    },
+    {
+      name: 'Expanse North',
+      id: 'expanseNorth',
+      img: '',
+      desc: `
+        This is the edge of oblivion. You are meant to explore uncharted territory, but there is nothing here to take note of.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'east', id: 'incomprehensibleWhale' },
+        { dir: 'west', id: 'ancientShark' },
+        { dir: 'north', id: 'noExit' },
+        { dir: 'south', id: 'gameStart' }
+        
+      ]
+    },
+    {
+      name: 'Cool Rock',
+      id: 'coolRock',
+      img: '',
+      desc: `
+        You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It’s difficult to describe what makes it so cool, but it is really ultra cool, you are certain of that.
+        Do you take action here or go East, West, North or South?
+
+
+      `,
+      exits: [
+        { dir: 'east', id: 'plasticBottle' },
+        { dir: 'west', id: 'prehistoricKelpForest' },
+        { dir: 'north', id: 'gameStart' },
+        { dir: 'south', id: 'noExit' }
+        
+      ]
+    },
+     {
+      name: 'Ancient Shark of Numberless Teeth',
+      id: 'ancientShark',
+      img: '',
+      desc: `
+         In front of you is what you believe must be a shark, but it only loosely fits that definition as you are familiar with it. Its mouth makes up more than half of its body, and its rows of teeth are innumerable. Its fins are disproportionately small and they flail ineffectively as it moves slowly, haltingly through the water.
+         Do you take action here or go East, West, North or South?
+      `,
+      exits: [
+        { dir: 'east', id: 'expanseNorth' },
+        { dir: 'west', id: 'noExit' },
+        { dir: 'north', id: 'noExit' },
+        { dir: 'south', id: 'expanseWest' }
+        
+      ]
+    },
+    {
+      name: 'Ancient Shark of Numberless Teeth',
+      id: 'ancientShark',
+      img: '',
+      desc: `
+         In front of you is what you believe must be a shark, but it only loosely fits that definition as you are familiar with it. Its mouth makes up more than half of its body, and its rows of teeth are innumerable. Its fins are disproportionately small and they flail ineffectively as it moves slowly, haltingly through the water.
+         Do you take action here or go East, West, North or South?
+      `,
+      exits: [
+        { dir: 'east', id: 'expanseNorth' },
+        { dir: 'west', id: 'noExit' },
+        { dir: 'north', id: 'noExit' },
+        { dir: 'south', id: 'expanseWest' }
         
       ]
     },
