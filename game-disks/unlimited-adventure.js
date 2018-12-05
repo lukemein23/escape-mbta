@@ -80,7 +80,7 @@ const unlimitedAdventure = {
               
           }  else if (room.id == 'expanseWest') {
             println('A wasted exposure. There is nothing here.');
-                var item = {name: 'empty photo'}
+                var item = {name: 'blurry photo'}
                 disk.numPhotos.push(item);
                 println(`You took the ${item.name}.`);
             return;
@@ -88,7 +88,7 @@ const unlimitedAdventure = {
           } 
            else if (room.id == 'expanseNorth') {
             println('A wasted exposure. There is nothing here.');
-                var item = {name: 'empty photo'}
+                var item = {name: 'blurry photo'}
                 disk.numPhotos.push(item);
                 println(`You took the ${item.name}.`);
             return;
@@ -120,7 +120,7 @@ const unlimitedAdventure = {
           } 
            else if (room.id == 'plasticBottle') {
             println('You now have a photo of the translucent green plastic bottle. Useful.');
-                var item = {name: 'blurry photo'}
+                var item = {name: 'plastic bottle photo'}
                 disk.numPhotos.push(item);
                 println(`You took the ${item.name}.`);
             return;
@@ -128,6 +128,9 @@ const unlimitedAdventure = {
           } 
            else if (room.id == 'prehistoricKelpForest') {
             println('You now have a photo of the Prehistoric Kelp Forest. Perhaps it is impossible to capture, or perhaps you are a poor photographer, but this image does nothing to capture the weight or scale of the sight.');
+                var item = {name: 'kelp photo'}
+                disk.numPhotos.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           } 
@@ -147,6 +150,10 @@ const unlimitedAdventure = {
 Long have your heart and mind been held captive by the sea. For decades you have tossed and turned during sleepless nights, imagining the horror and wonder that man has yet to discover under its surface.
 
 Finally, you have been given the opportunity to explore its depths in completely uncharted territory. For your dive, you take with you a net for specimen collection and a camera to document your discoveries. 
+
+To explore type GO EAST, WEST, NORTH or SOUTH. 
+
+When your dive is complete, type GO SURFACE.
 
 To begin, enter GO DIVE
       `
@@ -173,7 +180,8 @@ Do you go East, West, North or South?
         { dir: 'east', id: 'coralReef' },
         { dir: 'west', id: 'expanseWest' },
         { dir: 'north', id: 'expanseNorth' },
-        { dir: 'south', id: 'coolRock' }
+        { dir: 'south', id: 'coolRock' },
+        { dir: 'surface', id: 'surface' },
         
       ]
 //       items: [
@@ -221,7 +229,8 @@ Do you go East, West, North or South?
         //{ dir: 'east', id: 'noExit' },
         { dir: 'west', id: 'gameStart' },
         { dir: 'north', id: 'incomprehensibleWhale' },
-        { dir: 'south', id: 'plasticBottle' }
+        { dir: 'south', id: 'plasticBottle' },
+        { dir: 'surface', id: 'surface' },
         
       ]
     },
@@ -237,7 +246,8 @@ Do you go East, West, North or South?
         { dir: 'east', id: 'plasticBottle' },
         { dir: 'west', id: 'prehistoricKelpForest' },
         { dir: 'north', id: 'gameStart' },
-        //{ dir: 'south', id: 'noExit' }
+        //{ dir: 'south', id: 'noExit' },
+        { dir: 'surface', id: 'surface' }
         
       ]
     },
@@ -254,7 +264,8 @@ Do you go East, West, North or South?
         { dir: 'east', id: 'gameStart' },
         //{ dir: 'west', id: 'noExit' },
         { dir: 'north', id: 'ancientShark' },
-        { dir: 'south', id: 'prehistoricKelpForest' }
+        { dir: 'south', id: 'prehistoricKelpForest' },
+        { dir: 'surface', id: 'surface' }
         
       ]
     },
@@ -271,7 +282,8 @@ Do you go East, West, North or South?
         { dir: 'east', id: 'incomprehensibleWhale' },
         { dir: 'west', id: 'ancientShark' },
         //{ dir: 'north', id: 'noExit' },
-        { dir: 'south', id: 'gameStart' }
+        { dir: 'south', id: 'gameStart' },
+        { dir: 'surface', id: 'surface' }
         
       ]
     },
@@ -289,7 +301,8 @@ Do you go East, West, North or South?
         { dir: 'east', id: 'plasticBottle' },
         { dir: 'west', id: 'prehistoricKelpForest' },
         { dir: 'north', id: 'gameStart' },
-        { dir: 'south', id: 'noExit' }
+        //{ dir: 'south', id: 'noExit' },
+        { dir: 'surface', id: 'surface' }
         
       ]
     },
@@ -305,7 +318,8 @@ Do you go East, West, North or South?
         { dir: 'east', id: 'expanseNorth' },
         //{ dir: 'west', id: 'noExit' },
         //{ dir: 'north', id: 'noExit' },
-        { dir: 'south', id: 'expanseWest' }
+        { dir: 'south', id: 'expanseWest' },
+        { dir: 'surface', id: 'surface' }
         
       ]
     },
@@ -321,7 +335,8 @@ Do you go East, West, North or South?
         //{ dir: 'east', id: 'noExit' },
         { dir: 'west', id: 'expanseNorth' },
         //{ dir: 'north', id: 'noExit' },
-        { dir: 'south', id: 'coralReef' }
+        { dir: 'south', id: 'coralReef' },
+        { dir: 'surface', id: 'surface' }
         
       ]
     },
@@ -338,6 +353,7 @@ Do you go East, West, North or South?
         { dir: 'west', id: 'coolRock' },
         { dir: 'north', id: 'coralReef' },
         //{ dir: 'south', id: 'noExit' }
+        { dir: 'surface', id: 'surface' }
         
       ]
     },
@@ -354,19 +370,18 @@ Do you go East, West, North or South?
         { dir: 'east', id: 'coolRock' },
         //{ dir: 'west', id: 'noExit' },
         { dir: 'north', id: 'expanseWest' },
-        //{ dir: 'south', id: 'noExit' }
+        //{ dir: 'south', id: 'noExit' },
+        { dir: 'surface', id: 'surface' }
         
       ]
     },
      {
       name: 'Surface',
-      id: 'prehistoricKelpForest',
+      id: 'surface',
       img: '',
-      desc: `
-         You find yourself lost in a forest of towering, anchored kelp. These must be as old or older than the Redwoods of California. The foreboding feeling you get when you try to look past the first few rows of plants reminds you of the fear you felt for the woods behind the house you grew up in. 
-         Do you take action here or go East, West, North or South?
-
-      `,
+      desc: {use: ({disk, inv,}) => {
+         'You have completed your dive. To show for it you have:' + inv() + 
+         'The truly know the sea is impossible and you remain in the dark, but these are a start.'}},
       exits: [
         { dir: 'east', id: 'coolRock' },
         //{ dir: 'west', id: 'noExit' },
