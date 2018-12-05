@@ -12,7 +12,12 @@ const unlimitedAdventure = {
             println('These fish are too fast for your terrestrial reflexes and disappear into the expanse. You do succeed in chipping off a large section of virgin coral. You have defaced something irreplaceable. Crumbs of prehistory slip through the holes in your net and drift slowly to an even deeper, unreachable place. You are left with only a sense of shame.');
             return;
               
-          }  else {
+          }  else if (room.id == 'expanseWest') {
+            println('You swipe at the darkness and come back with nothing.');
+            return;
+              
+          }
+             else {
              console.log(room.id)
           }
         }},
@@ -27,7 +32,12 @@ const unlimitedAdventure = {
             println('need camera line');
             return;
               
-          }  else {
+          }  else if (room.id == 'expanseWest') {
+            println('need camera line');
+            return;
+              
+          } 
+           else {
              console.log(room.id)
           }
          }}
@@ -61,7 +71,9 @@ To begin, enter GO DIVE
       img: `
       `,
       desc: `
-These are new and treacherous depths. The water is freezing even through your equipment, and it is difficult to see more 5 meters in front of you. Uncertainty lies in every direction, but you must start somewhere. Do you go East, West, North or South?
+These are new and treacherous depths. The water is freezing even through your equipment, and it is difficult to see more 5 meters in front of you. Uncertainty lies in every direction, but you must start somewhere. 
+
+Do you go East, West, North or South?
       `, 
       exits: [
         { dir: 'east', id: 'coralReef' },
@@ -109,6 +121,8 @@ These are new and treacherous depths. The water is freezing even through your eq
       img: '',
       desc: `
         You approach a majestic reef made up of deep water coral. A school of luminous fish, forever untouched by the light of the sun and unseen by human eyes up until now, swim nimbly about its glorious spires.
+
+        Do you take an action here or go East, West, North or South?
       `,
       exits: [
         { dir: 'east', id: 'noExit' },
@@ -131,6 +145,23 @@ These are new and treacherous depths. The water is freezing even through your eq
         { dir: 'west', id: 'prehistoricKelpForest' },
         { dir: 'north', id: 'gameStart' },
         { dir: 'south', id: 'noExit' }
+        
+      ]
+    },
+     {
+      name: 'Expanse West',
+      id: 'expanseWest',
+      img: '',
+      desc: `
+        This is the edge of oblivion. You are meant to explore uncharted territory, but there is nothing here to take note of.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'east', id: 'gameStart' },
+        { dir: 'west', id: 'noExit' },
+        { dir: 'north', id: 'ancientShark' },
+        { dir: 'south', id: 'prehistoricKelpForest' }
         
       ]
     },

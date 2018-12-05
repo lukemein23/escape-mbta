@@ -165,7 +165,7 @@ const loadDisk = (disk, config = {}) => {
             }
             const nextRoom = exits.find(exit => exit.dir === args[1]);
             if (!nextRoom) {
-              println('There is no exit in that direction.');
+              println('You dare not go any further. This is the end of your expedition’s scope.');
             } else {
               enterRoom(nextRoom.id);
             }
