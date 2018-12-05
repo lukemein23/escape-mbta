@@ -3,13 +3,17 @@ const unlimitedAdventure = {
   numPhotos: [],
   inventory: [        
         { name: 'net', 
-           //desc: 'This needs a description',
            use: ({disk, println, getRoom, enterRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'gameStart') {
             println('There is nothing to capture here. Only darkness, and you can only bring back its memory.');
             return;
-          }  else if (room.id == 'coralReef') {
+          }  else if (room.id == 'gameStart') {
+            println('Good practice. This may prove to be a useful tool.');
+            return;
+              
+          } 
+             else if (room.id == 'coralReef') {
             println('These fish are too fast for your terrestrial reflexes and disappear into the expanse. You do succeed in chipping off a large section of virgin coral. You have defaced something irreplaceable. Crumbs of prehistory slip through the holes in your net and drift slowly to an even deeper, unreachable place. You are left with only a sense of shame.');
             return;
               
@@ -71,7 +75,14 @@ const unlimitedAdventure = {
                 disk.numPhotos.push(item);
                 println(`You took the ${item.name}.`);
             return;
-          }  else if (room.id == 'coralReef') {
+          }  else if (room.id == 'gameStart') {
+            println('You now have a photo of the ocean. It is blue but also a little green.');
+                var item = {name: 'blurry photo'}
+                disk.numPhotos.push(item);
+                println(`You took the ${item.name}.`);
+            return;
+              
+          } else if (room.id == 'coralReef') {
             println('The brilliant luminescence of these tiny creatures and their majestic habitat is captured forever in your photograph. ');
                 var item = {name: 'blurry photo'}
                 disk.numPhotos.push(item);
@@ -184,38 +195,6 @@ Do you go East, West, North or South?
         { dir: 'surface', id: 'surface' },
         
       ]
-//       items: [
-//         { name: 'key', desc: 'It looks like a key.', isTakeable: true, use: ({disk, println, getRoom}) => {
-//           const room = getRoom(disk.roomId);
-//           const door = room.items.find(item => item.name === 'door');
-//           if (door) {
-//             println('The door has opened!');
-//             door.isOpen = true;
-//           } else {
-//             println('There\'s nothing to use the key on.');
-//           }
-//         }},
-//         { name: 'book', desc: 'It appears to contain some sort of encantation, or perhaps... code.', isTakeable: true, use: ({disk, println, getRoom}) => {
-//           const room = getRoom(disk.roomId);
-//           const door = room.items.find(item => item.name === 'door');
-
-//           if (door) {
-//             println('You already used the book!');
-//             return;
-//           }
-
-//           println('A door has appeared from nothing! It seems to go nowhere...');
-//           room.items.push({ name: 'door', desc: 'It seems to go nowhere...', isOpen: false, use: ({disk, println, enterRoom}) => {
-//             const door = room.items.find(item => item.name === 'door');
-//             if (door.isOpen) {
-//               enterRoom('gameReallyOver');
-//             } else {
-//               println('The door is locked.');
-//             }
-//           }});
-//         }},
-//         { name: 'castle', desc: 'It has been... corrupted somehow.' },
-//       ]
     },
     {
       name: 'Coral Reef',

@@ -149,8 +149,9 @@ const loadDisk = (disk, config = {}) => {
                 println(`* ${disk.numPhotos.length} photo(s)`);
             }}
             println('The truly know the sea is impossible and you remain in the dark, but these are a start.');
-            document.body.innerHTML = ""
-            println('To dive again type 
+            setTimeout(function(){
+                document.getElementById('output').innerHTML = "To dive again type Go Dive.";
+            }, 6000);
           },
           help() {
             const instructions = `
@@ -162,6 +163,7 @@ const loadDisk = (disk, config = {}) => {
               USE [OBJECT NAME] e.g. 'use door'
               INV :: list inventory items
               HELP :: this help menu
+              SURFACE return to the surface and end your dive
             `;
             println(instructions);
           },
