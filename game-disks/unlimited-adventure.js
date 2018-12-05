@@ -1,5 +1,6 @@
 const unlimitedAdventure = {
   roomId: 'diveIntro',
+  numPhotos: 0,
   inventory: [        
         { name: 'net', 
            //desc: 'This needs a description',
@@ -23,13 +24,29 @@ const unlimitedAdventure = {
               
           }
              else if (room.id == 'coolRock') {
-            println('You acquire the unspeakably cool rock. Hopefully it’s magnificence will resonate at home.');
+            println('You acquire the unspeakably cool rock. Hopefully its magnificence will resonate at home.');
+                var item = {name: 'cool rock'}
+                disk.inventory.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           }
              else if (room.id == 'ancientShark') {
             println('What a terrible decision. You ineffectually swat at the Ancient Shark of Numberless Teeth and it swallows you whole.');
                //how to end the game with this?
+            return;
+              
+          }
+             else if (room.id == 'incomprehensibleWhale') {
+            println('Your net bumps up against the creature that is larger than the town you grew up. It is not a surprise that it does not fit inside your pitiful tool.');
+            return;
+              
+          }
+              else if (room.id == 'plasticBottle') {
+            println('You retrieve the plastic bottle. Good. It is clean and empty and dark again.');
+                var item = {name: 'plastic bottle'}
+                disk.inventory.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           }
@@ -43,18 +60,22 @@ const unlimitedAdventure = {
             const room = getRoom(disk.roomId);
             if (room.id == 'gameStart') {
             println('need camera line');
+                numPhotos=numPhotos+1
+                var item = {name: 'blurry photo', numPhotos: numPhotos+1}
+                disk.inventory.push(item);
+                println(`You took the ${item.name}.`);
             return;
           }  else if (room.id == 'coralReef') {
-            println('need camera line');
+            println('The brilliant luminescence of these tiny creatures and their majestic habitat is captured forever in your photograph. ');
             return;
               
           }  else if (room.id == 'expanseWest') {
-            println('need camera line');
+            println('A wasted exposure. There is nothing here.');
             return;
               
           } 
            else if (room.id == 'expanseNorth') {
-            println('need camera line');
+            println('A wasted exposure. There is nothing here.');
             return;
               
           } 
@@ -65,6 +86,16 @@ const unlimitedAdventure = {
           } 
            else if (room.id == 'ancientShark') {
             println('Your hands are shaky as your camera flashes. All that is captured is a blurry image of a few teeth and the suggestion of many more.');
+            return;
+              
+          } 
+           else if (room.id == 'incomprehensibleWhale') {
+            println('A dark grey mass is all that your camera captures. When your eyes could not grasp the enormity of this being it was foolish to think that your camera would be capable.');
+            return;
+              
+          } 
+           else if (room.id == 'plasticBottle') {
+            println('You now have a photo of the translucent green plastic bottle. Useful.');
             return;
               
           } 
@@ -248,18 +279,34 @@ Do you go East, West, North or South?
       ]
     },
     {
-      name: 'Ancient Shark of Numberless Teeth',
-      id: 'ancientShark',
+      name: 'Incomprehensible Whale',
+      id: 'incomprehensibleWhale',
       img: '',
       desc: `
-         In front of you is what you believe must be a shark, but it only loosely fits that definition as you are familiar with it. Its mouth makes up more than half of its body, and its rows of teeth are innumerable. Its fins are disproportionately small and they flail ineffectively as it moves slowly, haltingly through the water.
+         A whale? Perhaps? If it is a whale it is a whale larger than any whale you have seen or even conceived of, you may think that you have an idea of what I mean. In reality you have no idea at all. The size of this whale is larger than your concept of large. To try to take it all in with your eyes is to attempt the impossible. You will never know its scope.
          Do you take action here or go East, West, North or South?
       `,
       exits: [
-        { dir: 'east', id: 'expanseNorth' },
-        { dir: 'west', id: 'noExit' },
+        { dir: 'east', id: 'noExit' },
+        { dir: 'west', id: 'expanseNorth' },
         { dir: 'north', id: 'noExit' },
-        { dir: 'south', id: 'expanseWest' }
+        { dir: 'south', id: 'coralReef' }
+        
+      ]
+    },
+    {
+      name: 'Plastic Bottle',
+      id: 'plasticBottle',
+      img: '',
+      desc: `
+         Suspended in the darkness is a translucent green plastic bottle. Litter.
+         Do you take action here or go East, West, North or South?
+      `,
+      exits: [
+        { dir: 'east', id: 'noExit' },
+        { dir: 'west', id: 'coolRock' },
+        { dir: 'north', id: 'coralReef' },
+        { dir: 'south', id: 'noExit' }
         
       ]
     },
