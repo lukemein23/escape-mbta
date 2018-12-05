@@ -168,7 +168,7 @@ const loadDisk = (disk, config = {}) => {
             }
             const nextRoom = exits.find(exit => exit.dir === args[1]);
             if (!nextRoom) {
-              println('You dare not go any further. This is the end of your expedition’s scope.');
+              println('You dare not go any further. That would be beyond the scope of your expedition.');
             } else {
               enterRoom(nextRoom.id);
             }

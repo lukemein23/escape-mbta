@@ -34,7 +34,7 @@ const unlimitedAdventure = {
              else if (room.id == 'ancientShark') {
             println('What a terrible decision. You ineffectually swat at the Ancient Shark of Numberless Teeth and it swallows you whole.');
             return
-            
+            //figure out how to end the game!!
             //enterRoom('diveIntro');
               
           }
@@ -193,7 +193,6 @@ Do you go East, West, North or South?
       img: '',
       desc: `
         You approach a majestic reef made up of deep water coral. A school of luminous fish, forever untouched by the light of the sun and unseen by human eyes up until now, swim nimbly about its glorious spires.
-
         Do you take an action here or go East, West, North or South?
       `,
       exits: [
@@ -209,7 +208,7 @@ Do you go East, West, North or South?
       id: 'coolRock',
       img: '',
       desc: `
-        You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It’s difficult to describe what makes it so cool, but it is really ultra cool, you are certain of that.
+        You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It is difficult to describe what makes it so cool, but it is really ultra cool, you are certain of that.
         Do you take action here or go East, West, North or South?
       `,
       exits: [
@@ -259,7 +258,7 @@ Do you go East, West, North or South?
       id: 'coolRock',
       img: '',
       desc: `
-        You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It’s difficult to describe what makes it so cool, but it is really ultra cool, you are certain of that.
+        You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It is difficult to describe what makes it so cool, but it is really ultra cool, you are certain of that.
         Do you take action here or go East, West, North or South?
 
 
@@ -325,7 +324,7 @@ Do you go East, West, North or South?
       id: 'prehistoricKelpForest',
       img: '',
       desc: `
-         You find yourself lost in a forest of towering, anchored kelp. These must be as old or older than California’s Redwoods. The foreboding feeling you get when you try to look past the first few rows of plants reminds you of the fear you felt for the woods behind your grandparents’ house. 
+         You find yourself lost in a forest of towering, anchored kelp. These must be as old or older than the Redwoods of California. The foreboding feeling you get when you try to look past the first few rows of plants reminds you of the fear you felt for the woods behind the house you grew up in. 
          Do you take action here or go East, West, North or South?
 
       `,
