@@ -1,8 +1,7 @@
-## text-engine
+## dive the game
 
 #### What is it?
-A JavaScript REPL-style text-based adventure game engine. Small (~200 lines) and easy to use with no dependencies.
-
+A JavaScript REPL-style text-based adventure game engine, based on the text-
 #### How do I use it?
 To create your own adventure, use `game-disks/unlimited-adventure.js` as a template.
 
