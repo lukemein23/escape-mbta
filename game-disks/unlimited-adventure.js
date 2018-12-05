@@ -1,17 +1,37 @@
 const unlimitedAdventure = {
   roomId: 'diveIntro',
   inventory: [        
-        { name: 'net', desc: 'This needs a description',
+        { name: 'net', 
+           //desc: 'This needs a description',
            use: ({disk, println, getRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'gameStart') {
             println('There is nothing to capture here. Only darkness, and you can only bring back its memory.');
             return;
+          }  else if (room.id == 'coralReef') {
+            println('These fish are too fast for your terrestrial reflexes and disappear into the expanse. You do succeed in chipping off a large section of virgin coral. You have defaced something irreplaceable. Crumbs of prehistory slip through the holes in your net and drift slowly to an even deeper, unreachable place. You are left with only a sense of shame.');
+            return;
+              
           }  else {
-              console.log(room.id)
+             console.log(room.id)
           }
         }},
-        { name: 'camera', desc: 'This needs a description'}],
+        { name: 'camera', 
+         desc: 'This needs a description',
+         use: ({disk, println, getRoom}) => {
+            const room = getRoom(disk.roomId);
+            if (room.id == 'gameStart') {
+            println('need camera line');
+            return;
+          }  else if (room.id == 'coralReef') {
+            println('need camera line');
+            return;
+              
+          }  else {
+             console.log(room.id)
+          }
+         }}
+  ],
   rooms: [
     {
       name: 'DIVE!',
@@ -109,7 +129,7 @@ These are new and treacherous depths. The water is freezing even through your eq
       exits: [
         { dir: 'east', id: 'plasticBottle' },
         { dir: 'west', id: 'prehistoricKelpForest' },
-        { dir: 'north', id: 'gameStart },
+        { dir: 'north', id: 'gameStart' },
         { dir: 'south', id: 'noExit' }
         
       ]
