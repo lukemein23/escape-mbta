@@ -176,7 +176,8 @@ To begin, enter GO DIVE
       name: 'The Ocean Depths',
       id: 'gameStart',
       img: `
-      `,
+
+`,
       desc: `
 These are new and treacherous depths. The water is freezing even through your equipment, and it is difficult to see more 5 meters in front of you. Uncertainty lies in every direction, but you must start somewhere. 
 
@@ -254,7 +255,7 @@ Do you go East, West, North or South?
       id: 'coolRock',
       img: '',
       desc: `
-        You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It is difficult to describe what makes it so cool, but it is really ultra cool, you are certain of that.
+        You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It is difficult to describe what makes it so    cool, but it is really ultra cool, you are certain of that.
         Do you take action here or go East, West, North or South?
 
 
@@ -268,63 +269,6 @@ Do you go East, West, North or South?
      {
       name: 'Ancient Shark of Numberless Teeth',
       id: 'ancientShark',
-      img: `                                          XXXXXXXXX
-                                      XXXX          XXX
-                                XXXXXX                 XXX
-                               XX               XXX      XXXX
-                            XXX     XX           X           XXXX
-                        XXXX        XX           X               XXXX
-                      XXX                        X                   XXXXXX
-                    XX                                                    XXXXX
-                 XXX                                                          XXXXXXX
-              XXXX                                                                  XXXXX
-            XXXXXX                                                                       XX
-            XX XX                                                               XX        X
-          XXXXXX                                                           X XXXXX         XXX
-          XXXXX                                                        XXXXXXXXXXXXXXXX      XXX
-        XX                                                            XX XXXXXXXXXXXXXX         XXX                                  X                             X
-       XX                                                            XXXXXXXXXXXX XXXX            XX                                XXX                            X
-      XX                                                             XXXXXXXXXXXXXXXXX             XX                               X XX                           XX
-     XX                                                               XXXXXXXXXX XXXX        XX     X                              X   X                           X X
-     X                                                                   XXXXXXXXX          XXX     X                              X    X                          XXXX
-    X                                                                                X     XX X     X                              X    XX                          X  X
-   XX                                                                                X     X  X     X                              X     XX                        XX  XX
- X X                                                                     X          XX    XX  X     X                              X      X                     XXXX    XX
- XX                                                                     XXX           X  XX   X      X                             X      XX                   XX        XX
-  X                                                                X    X X       X   X       X      X                              X      X               XXXX           XX
- X XX        X       XX                                          XXX   X  X           X X      X     X                              X       X           XXXX               X
- X X  X     XXXX    XXXXX      XXX         XXXX       XX        X  XX     X      X    XXX    X X     XX                             X       XXX      XXX                    XX
-X  X   X   XX  XX  X  XXX     X  XX       XX   X      XXX      X    XX         X       XX  XXX X      X                             X          XXXXXX                        XX
-X  X    X XX     X X  X  XX  XX    X     X      XX  XX  XXX  X       X     X  X     X   X XX   X      XX                            X                                         XX
-X  XX   XX        XX XX   XXXX     XX  XX        XXX      XXXX  XXX XX     XXX      XXX   XX    X      X                           XX                                          XXX
-X  XXX   X          XX    X  X       XXX          X     XXX  XXXX XXXXX  XXXXX   X  XXXXX X XXXXX      XX                        XXX                                             XX
-X  X XXX   XX    XXXX    X            X    X           XX     XX   XX XX X      XXX  X   XX X           XX                     XXX                                                XX
-X X   XXX XXXXX  X XX   X                XXX          XX            X   XXXX    X  XXX       X           XXX                 XXX                                       XXXXXXXXXXXX XX
-X X      XX   XXXX     XX              XXX           XX      XX    XXXX   X XXX X       XX   XX            XXX            XXX                                         X            XXX
-X X  XX         X      X              XX            XX  XXX X XX  XX   XXXX   XXX     X  XXXXXX               XXXXXXXXXXXXX                                           X
-X X XXX   X    X       X              X            XX   X XX    X X       X     XX    X   X                                                                          X
- XXX  X XXX  XXXX      X              X           XX       X     XX  XX   XXX   XXX   XX  X                                                                         XX
- X    X X X XX  X    XXX              X           X   X         XX  XXXX  X XX X   X  X XXX                                                                       XXX
- X     X   XX   XXX  X XX             X           X  X X   XXX  XXX X   XXX  XXX    XXX                                                                         XXX
- X         XX    XXX X  X                        XXXX   X  X  X X  XX    XX           X                                                                         X
- XX                XX   XX                       X XX    XXX  XXX   X                                                                                        XXX
-  XX                     X                       X                                                                                                       XXXXX
-   XX                     X                      X                                                                                                     XXX
-     XX                   XX                     X                                                                                                  XXXX
-      XXXX                 XXX                   X                                                                                              XXXXX
-          XXX                XX                  X                                                                                        XXXXXX
-             XX               XX                 X                                                                                     XXXX
-              XXX               XX               X                                                                                XXXXXX
-                 XXX              XXX            X                                                                           XXXXX
-                    XXX              XXX         X                                                                          XX
-                       XX               XXXXXXXXX                                                                          XX
-                         XXX                                                                          XXXXX             XXXX
-                            XX X                                                         XX XXX XXX X     XXXXXXXXXXXXXXXXXXXXX
-                                XXXXX                                            XXXXXXXXX
-                                    XXX                                  X XXXXXX
-                                      XXXX XX                    XX XXX X
-                                             XXXXXXXXXXXXXXXXXX X
-`,
       desc: `
          In front of you is what you believe must be a shark, but it only loosely fits that definition as you are familiar with it. Its mouth makes up more than half of its body, and its rows of teeth are innumerable. Its fins are disproportionately small and they flail ineffectively as it moves slowly, haltingly through the water.
          Do you take action here or go East, West, North or South?
