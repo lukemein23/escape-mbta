@@ -2,8 +2,15 @@ const unlimitedAdventure = {
   roomId: 'diveIntro',
   inventory: [        
         { name: 'net', desc: 'This needs a description',
-        use: ({disk, println, getRoom}) => 
-        },
+           use: ({disk, println, getRoom}) => {
+            const room = getRoom(disk.roomId);
+            if (room.id == 'gameStart') {
+            println('There is nothing to capture here. Only darkness, and you can only bring back its memory.');
+            return;
+          }  else {
+              console.log(room.id)
+          }
+        }},
         { name: 'camera', desc: 'This needs a description'}],
   rooms: [
     {
