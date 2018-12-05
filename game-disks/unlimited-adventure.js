@@ -1,6 +1,10 @@
 const unlimitedAdventure = {
   roomId: 'diveIntro',
-  inventory: [],
+  inventory: [        
+        { name: 'net', desc: 'This needs a description',
+        use: ({disk, println, getRoom}) => 
+        },
+        { name: 'camera', desc: 'This needs a description'}],
   rooms: [
     {
       name: 'DIVE!',
@@ -14,11 +18,12 @@ Long has your heart and mind been held captive by the sea. At night for decades 
 Finally, you have been given the opportunity to explore its depths in completely uncharted territory. For your dive, you take with you a net for specimen collection and a camera to document your discoveries. 
 
 To begin, enter GO DIVE
-      `,
-      items: [
-        { name: 'net', desc: 'This needs a description',isTakeable: true },
-        { name: 'camera', desc: 'This needs a description', isTakeable: true }
-      ],
+      `
+      // ,items: [
+      //   { name: 'net', desc: 'This needs a description',isTakeable: true },
+      //   { name: 'camera', desc: 'This needs a description', isTakeable: true }
+      // ]
+      ,
       exits: [
         { dir: 'dive', id: 'gameStart' }
       ]
