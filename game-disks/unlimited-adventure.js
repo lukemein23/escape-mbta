@@ -84,7 +84,7 @@ const unlimitedAdventure = {
               
           } else if (room.id == 'coralReef') {
             println('The brilliant luminescence of these tiny creatures and their majestic habitat is captured forever in your photograph. ');
-                var item = {name: 'blurry photo'}
+                var item = {name: 'photo of fish with reef'}
                 disk.numPhotos.push(item);
                 println(`You took the ${item.name}.`);
             return;
@@ -115,7 +115,7 @@ const unlimitedAdventure = {
           } 
            else if (room.id == 'ancientShark') {
             println('Your hands are shaky as your camera flashes. All that is captured is a blurry image of a few teeth and the suggestion of many more.');
-                var item = {name: 'blurry photo'}
+                var item = {name: 'incomplete documentation of impossible being'}
                 disk.numPhotos.push(item);
                 println(`You took the ${item.name}.`);
             return;
@@ -138,7 +138,7 @@ const unlimitedAdventure = {
               
           } 
            else if (room.id == 'prehistoricKelpForest') {
-            println('You now have a photo of the Prehistoric Kelp Forest. Perhaps it is impossible to capture, or perhaps you are a poor photographer, but this image does nothing to capture the weight or scale of the sight.');
+            println('You now have a photo of the Prehistoric Kelp Forest. Perhaps it is impossible to capture, or perhaps you are a poor photographer, but this image does nothing to reflect the weight or scale of the sight.');
                 var item = {name: 'kelp photo'}
                 disk.numPhotos.push(item);
                 println(`You took the ${item.name}.`);
@@ -288,7 +288,63 @@ Do you go East, West, North or South?
      {
       name: 'Ancient Shark of Numberless Teeth',
       id: 'ancientShark',
-      img: '',
+      img: `                                          XXXXXXXXX
+                                      XXXX          XXX
+                                XXXXXX                 XXX
+                               XX               XXX      XXXX
+                            XXX     XX           X           XXXX
+                        XXXX        XX           X               XXXX
+                      XXX                        X                   XXXXXX
+                    XX                                                    XXXXX
+                 XXX                                                          XXXXXXX
+              XXXX                                                                  XXXXX
+            XXXXXX                                                                       XX
+            XX XX                                                               XX        X
+          XXXXXX                                                           X XXXXX         XXX
+          XXXXX                                                        XXXXXXXXXXXXXXXX      XXX
+        XX                                                            XX XXXXXXXXXXXXXX         XXX                                  X                             X
+       XX                                                            XXXXXXXXXXXX XXXX            XX                                XXX                            X
+      XX                                                             XXXXXXXXXXXXXXXXX             XX                               X XX                           XX
+     XX                                                               XXXXXXXXXX XXXX        XX     X                              X   X                           X X
+     X                                                                   XXXXXXXXX          XXX     X                              X    X                          XXXX
+    X                                                                                X     XX X     X                              X    XX                          X  X
+   XX                                                                                X     X  X     X                              X     XX                        XX  XX
+ X X                                                                     X          XX    XX  X     X                              X      X                     XXXX    XX
+ XX                                                                     XXX           X  XX   X      X                             X      XX                   XX        XX
+  X                                                                X    X X       X   X       X      X                              X      X               XXXX           XX
+ X XX        X       XX                                          XXX   X  X           X X      X     X                              X       X           XXXX               X
+ X X  X     XXXX    XXXXX      XXX         XXXX       XX        X  XX     X      X    XXX    X X     XX                             X       XXX      XXX                    XX
+X  X   X   XX  XX  X  XXX     X  XX       XX   X      XXX      X    XX         X       XX  XXX X      X                             X          XXXXXX                        XX
+X  X    X XX     X X  X  XX  XX    X     X      XX  XX  XXX  X       X     X  X     X   X XX   X      XX                            X                                         XX
+X  XX   XX        XX XX   XXXX     XX  XX        XXX      XXXX  XXX XX     XXX      XXX   XX    X      X                           XX                                          XXX
+X  XXX   X          XX    X  X       XXX          X     XXX  XXXX XXXXX  XXXXX   X  XXXXX X XXXXX      XX                        XXX                                             XX
+X  X XXX   XX    XXXX    X            X    X           XX     XX   XX XX X      XXX  X   XX X           XX                     XXX                                                XX
+X X   XXX XXXXX  X XX   X                XXX          XX            X   XXXX    X  XXX       X           XXX                 XXX                                       XXXXXXXXXXXX XX
+X X      XX   XXXX     XX              XXX           XX      XX    XXXX   X XXX X       XX   XX            XXX            XXX                                         X            XXX
+X X  XX         X      X              XX            XX  XXX X XX  XX   XXXX   XXX     X  XXXXXX               XXXXXXXXXXXXX                                           X
+X X XXX   X    X       X              X            XX   X XX    X X       X     XX    X   X                                                                          X
+ XXX  X XXX  XXXX      X              X           XX       X     XX  XX   XXX   XXX   XX  X                                                                         XX
+ X    X X X XX  X    XXX              X           X   X         XX  XXXX  X XX X   X  X XXX                                                                       XXX
+ X     X   XX   XXX  X XX             X           X  X X   XXX  XXX X   XXX  XXX    XXX                                                                         XXX
+ X         XX    XXX X  X                        XXXX   X  X  X X  XX    XX           X                                                                         X
+ XX                XX   XX                       X XX    XXX  XXX   X                                                                                        XXX
+  XX                     X                       X                                                                                                       XXXXX
+   XX                     X                      X                                                                                                     XXX
+     XX                   XX                     X                                                                                                  XXXX
+      XXXX                 XXX                   X                                                                                              XXXXX
+          XXX                XX                  X                                                                                        XXXXXX
+             XX               XX                 X                                                                                     XXXX
+              XXX               XX               X                                                                                XXXXXX
+                 XXX              XXX            X                                                                           XXXXX
+                    XXX              XXX         X                                                                          XX
+                       XX               XXXXXXXXX                                                                          XX
+                         XXX                                                                          XXXXX             XXXX
+                            XX X                                                         XX XXX XXX X     XXXXXXXXXXXXXXXXXXXXX
+                                XXXXX                                            XXXXXXXXX
+                                    XXX                                  X XXXXXX
+                                      XXXX XX                    XX XXX X
+                                             XXXXXXXXXXXXXXXXXX X
+`,
       desc: `
          In front of you is what you believe must be a shark, but it only loosely fits that definition as you are familiar with it. Its mouth makes up more than half of its body, and its rows of teeth are innumerable. Its fins are disproportionately small and they flail ineffectively as it moves slowly, haltingly through the water.
          Do you take action here or go East, West, North or South?
@@ -307,7 +363,7 @@ Do you go East, West, North or South?
       id: 'incomprehensibleWhale',
       img: '',
       desc: `
-         A whale? Perhaps? If it is a whale it is a whale larger than any whale you have seen or even conceived of, you may think that you have an idea of what I mean. In reality you have no idea at all. The size of this whale is larger than your concept of large. To try to take it all in with your eyes is to attempt the impossible. You will never know its scope.
+         A whale? Perhaps? If it is a whale it is a whale larger than any whale you have seen or even conceived of. In reality you have no idea at all. The size of this whale is larger than your concept of large. To try to take it all in with your eyes is to attempt the impossible. You will never know its scope.
          Do you take action here or go East, West, North or South?
       `,
       exits: [
