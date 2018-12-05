@@ -4,7 +4,7 @@ const unlimitedAdventure = {
   inventory: [        
         { name: 'net', 
            //desc: 'This needs a description',
-           use: ({disk, println, getRoom}) => {
+           use: ({disk, println, getRoom, enterRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'gameStart') {
             println('There is nothing to capture here. Only darkness, and you can only bring back its memory.');
@@ -33,9 +33,7 @@ const unlimitedAdventure = {
           }
              else if (room.id == 'ancientShark') {
             println('What a terrible decision. You ineffectually swat at the Ancient Shark of Numberless Teeth and it swallows you whole.');
-            return
-            //figure out how to end the game!!
-            //enterRoom('diveIntro');
+            enterRoom('diveIntro');
               
           }
              else if (room.id == 'incomprehensibleWhale') {
@@ -53,6 +51,9 @@ const unlimitedAdventure = {
           }
              else if (room.id == 'prehistoricKelpForest') {
             println('You retrieve some prehistoric kelp. Excellent. This is a viable protein source and will make a wonderful snack later.');
+                var item = {name: 'kelp'}
+                disk.inventory.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           }
@@ -65,42 +66,63 @@ const unlimitedAdventure = {
          use: ({disk, println, getRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'gameStart') {
-            println('need camera line');
+            println('Your photo is dark and blurry. It does nothing to capture the effect of the vast emptiness before you.');
                 var item = {name: 'blurry photo'}
                 disk.numPhotos.push(item);
                 println(`You took the ${item.name}.`);
             return;
           }  else if (room.id == 'coralReef') {
             println('The brilliant luminescence of these tiny creatures and their majestic habitat is captured forever in your photograph. ');
+                var item = {name: 'blurry photo'}
+                disk.numPhotos.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           }  else if (room.id == 'expanseWest') {
             println('A wasted exposure. There is nothing here.');
+                var item = {name: 'empty photo'}
+                disk.numPhotos.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           } 
            else if (room.id == 'expanseNorth') {
             println('A wasted exposure. There is nothing here.');
+                var item = {name: 'empty photo'}
+                disk.numPhotos.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           } 
            else if (room.id == 'coolRock') {
             println('Your photo does the cool rock no justice. You really do need to see it in person to understand why it is so so cool.');
+                var item = {name: 'rock photo'}
+                disk.numPhotos.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           } 
            else if (room.id == 'ancientShark') {
             println('Your hands are shaky as your camera flashes. All that is captured is a blurry image of a few teeth and the suggestion of many more.');
+                var item = {name: 'blurry photo'}
+                disk.numPhotos.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           } 
            else if (room.id == 'incomprehensibleWhale') {
             println('A dark grey mass is all that your camera captures. When your eyes could not grasp the enormity of this being it was foolish to think that your camera would be capable.');
+                var item = {name: 'grey mass photo'}
+                disk.numPhotos.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           } 
            else if (room.id == 'plasticBottle') {
             println('You now have a photo of the translucent green plastic bottle. Useful.');
+                var item = {name: 'blurry photo'}
+                disk.numPhotos.push(item);
+                println(`You took the ${item.name}.`);
             return;
               
           } 
@@ -321,6 +343,23 @@ Do you go East, West, North or South?
     },
     {
       name: 'Prehistoric Kelp Forest',
+      id: 'prehistoricKelpForest',
+      img: '',
+      desc: `
+         You find yourself lost in a forest of towering, anchored kelp. These must be as old or older than the Redwoods of California. The foreboding feeling you get when you try to look past the first few rows of plants reminds you of the fear you felt for the woods behind the house you grew up in. 
+         Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'east', id: 'coolRock' },
+        //{ dir: 'west', id: 'noExit' },
+        { dir: 'north', id: 'expanseWest' },
+        //{ dir: 'south', id: 'noExit' }
+        
+      ]
+    },
+     {
+      name: 'Surface',
       id: 'prehistoricKelpForest',
       img: '',
       desc: `
