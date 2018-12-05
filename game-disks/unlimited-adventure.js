@@ -167,12 +167,7 @@ To explore type GO EAST, WEST, NORTH or SOUTH.
 When your dive is complete, type GO SURFACE.
 
 To begin, enter GO DIVE
-      `
-      // ,items: [
-      //   { name: 'net', desc: 'This needs a description',isTakeable: true },
-      //   { name: 'camera', desc: 'This needs a description', isTakeable: true }
-      // ]
-      ,
+      `,
       exits: [
         { dir: 'dive', id: 'gameStart' }
       ]
@@ -191,8 +186,7 @@ Do you go East, West, North or South?
         { dir: 'east', id: 'coralReef' },
         { dir: 'west', id: 'expanseWest' },
         { dir: 'north', id: 'expanseNorth' },
-        { dir: 'south', id: 'coolRock' },
-        { dir: 'surface', id: 'surface' },
+        { dir: 'south', id: 'coolRock' }
         
       ]
     },
@@ -205,11 +199,9 @@ Do you go East, West, North or South?
         Do you take an action here or go East, West, North or South?
       `,
       exits: [
-        //{ dir: 'east', id: 'noExit' },
         { dir: 'west', id: 'gameStart' },
         { dir: 'north', id: 'incomprehensibleWhale' },
-        { dir: 'south', id: 'plasticBottle' },
-        { dir: 'surface', id: 'surface' },
+        { dir: 'south', id: 'plasticBottle' }
         
       ]
     },
@@ -224,10 +216,7 @@ Do you go East, West, North or South?
       exits: [
         { dir: 'east', id: 'plasticBottle' },
         { dir: 'west', id: 'prehistoricKelpForest' },
-        { dir: 'north', id: 'gameStart' },
-        //{ dir: 'south', id: 'noExit' },
-        { dir: 'surface', id: 'surface' }
-        
+        { dir: 'north', id: 'gameStart' }   
       ]
     },
      {
@@ -241,11 +230,8 @@ Do you go East, West, North or South?
       `,
       exits: [
         { dir: 'east', id: 'gameStart' },
-        //{ dir: 'west', id: 'noExit' },
         { dir: 'north', id: 'ancientShark' },
-        { dir: 'south', id: 'prehistoricKelpForest' },
-        { dir: 'surface', id: 'surface' }
-        
+        { dir: 'south', id: 'prehistoricKelpForest' }      
       ]
     },
     {
@@ -260,10 +246,7 @@ Do you go East, West, North or South?
       exits: [
         { dir: 'east', id: 'incomprehensibleWhale' },
         { dir: 'west', id: 'ancientShark' },
-        //{ dir: 'north', id: 'noExit' },
-        { dir: 'south', id: 'gameStart' },
-        { dir: 'surface', id: 'surface' }
-        
+        { dir: 'south', id: 'gameStart' }     
       ]
     },
     {
@@ -279,10 +262,7 @@ Do you go East, West, North or South?
       exits: [
         { dir: 'east', id: 'plasticBottle' },
         { dir: 'west', id: 'prehistoricKelpForest' },
-        { dir: 'north', id: 'gameStart' },
-        //{ dir: 'south', id: 'noExit' },
-        { dir: 'surface', id: 'surface' }
-        
+        { dir: 'north', id: 'gameStart' }       
       ]
     },
      {
@@ -351,11 +331,7 @@ X X XXX   X    X       X              X            XX   X XX    X X       X     
       `,
       exits: [
         { dir: 'east', id: 'expanseNorth' },
-        //{ dir: 'west', id: 'noExit' },
-        //{ dir: 'north', id: 'noExit' },
-        { dir: 'south', id: 'expanseWest' },
-        { dir: 'surface', id: 'surface' }
-        
+        { dir: 'south', id: 'expanseWest' }        
       ]
     },
     {
@@ -367,12 +343,8 @@ X X XXX   X    X       X              X            XX   X XX    X X       X     
          Do you take action here or go East, West, North or South?
       `,
       exits: [
-        //{ dir: 'east', id: 'noExit' },
         { dir: 'west', id: 'expanseNorth' },
-        //{ dir: 'north', id: 'noExit' },
-        { dir: 'south', id: 'coralReef' },
-        { dir: 'surface', id: 'surface' }
-        
+        { dir: 'south', id: 'coralReef' }     
       ]
     },
     {
@@ -384,11 +356,8 @@ X X XXX   X    X       X              X            XX   X XX    X X       X     
          Do you take action here or go East, West, North or South?
       `,
       exits: [
-        //{ dir: 'east', id: 'noExit' },
         { dir: 'west', id: 'coolRock' },
-        { dir: 'north', id: 'coralReef' },
-        //{ dir: 'south', id: 'noExit' }
-        { dir: 'surface', id: 'surface' }
+        { dir: 'north', id: 'coralReef' }
         
       ]
     },
@@ -403,25 +372,7 @@ X X XXX   X    X       X              X            XX   X XX    X X       X     
       `,
       exits: [
         { dir: 'east', id: 'coolRock' },
-        //{ dir: 'west', id: 'noExit' },
-        { dir: 'north', id: 'expanseWest' },
-        //{ dir: 'south', id: 'noExit' },
-        { dir: 'surface', id: 'surface' }
-        
-      ]
-    },
-     {
-      name: 'Surface',
-      id: 'surface',
-      img: '',
-      desc: 
-         
-         'The truly know the sea is impossible and you remain in the dark, but these are a start.',
-      exits: [
-        { dir: 'east', id: 'coolRock' },
-        //{ dir: 'west', id: 'noExit' },
-        { dir: 'north', id: 'expanseWest' },
-        //{ dir: 'south', id: 'noExit' }
+        { dir: 'north', id: 'expanseWest' }
         
       ]
     },
