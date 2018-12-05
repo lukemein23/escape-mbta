@@ -379,9 +379,9 @@ Do you go East, West, North or South?
       name: 'Surface',
       id: 'surface',
       img: '',
-      desc: {use: ({disk, inv,}) => {
+      desc: 
          'You have completed your dive. To show for it you have:' + inv() + 
-         'The truly know the sea is impossible and you remain in the dark, but these are a start.'}},
+         'The truly know the sea is impossible and you remain in the dark, but these are a start.',
       exits: [
         { dir: 'east', id: 'coolRock' },
         //{ dir: 'west', id: 'noExit' },
