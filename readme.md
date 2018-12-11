@@ -2,7 +2,9 @@
 ![Demo Screenshot](https://cdn.glitch.com/1bfa9f3a-3a61-4172-afe0-6ba07c2f7c67%2FScreen%20Shot%202018-12-05%20at%209.57.44%20PM.png?1544045041602 "Demo Screenshot")
 
 ## The Game
-Explore the unknown depths of the deep ocean and the creatures that lurk there.
+Explore the unknown depths of the deep ocean and the creatures that lurk there. The game was a collaboration between Robert Norman + Eve Ahearn, confronting eve's fear of the deep ocean. 
+
+## 
 
 #### What is it?
 A JavaScript REPL-style text-based adventure game engine, based on the [text-engine](https://github.com/okaybenji/text-engine) library, available on [npm](https://www.npmjs.com/package/text-engine) too -- see [text-engine-node](https://github.com/okaybenji/text-engine-node) for further info.
