@@ -5,7 +5,7 @@
 
 body {
   color: white;
-  background: #3385ff;
+  background: #d3ddde;
   font-size: 2vh;
   font-family: "Apple II";
   line-height: 4vh;
@@ -35,7 +35,7 @@ body {
   width: 98.5vw;
   height: 10vh;
   color:  white;
-  background: #3385ff;
+  background: #d3ddde;
   position: fixed;
   bottom: 0;
   font-size: 2vh;

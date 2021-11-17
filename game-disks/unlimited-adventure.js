@@ -152,7 +152,7 @@ const unlimitedAdventure = {
   ],
   rooms: [
     {
-      name: 'DIVE!',
+      name: 'ESCAPE THE MBTA!',
       id: 'diveIntro',
       img: `
 
@@ -166,7 +166,7 @@ To explore type GO EAST, WEST, NORTH or SOUTH.
 
 When your dive is complete, type GO SURFACE.
 
-To begin, enter GO DIVE
+To begin, enter BEGIN
       `,
       exits: [
         { dir: 'dive', id: 'gameStart' }
