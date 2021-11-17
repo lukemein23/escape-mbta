@@ -158,15 +158,9 @@ const unlimitedAdventure = {
 
       `,
       desc: `
-Long have your heart and mind been held captive by the sea. For decades you have tossed and turned during sleepless nights, imagining the horror and wonder that man has yet to discover under its surface.
+Welcome, fellow huskies! Your challenge today is to escape Ruggles and embark on a quest to find the train stop that will reveal the hidden treasure. During your commute via MBTA, you stumble upon some clues that guide you to your final destination. 
 
-Finally, you have been given the opportunity to explore its depths in completely uncharted territory. For your dive, you take with you a net for specimen collection and a camera to document your discoveries. 
-
-To explore type GO EAST, WEST, NORTH or SOUTH. 
-
-When your dive is complete, type GO SURFACE.
-
-To begin, enter GO ESCAPE
+Your first challenge (INSERT POLICE BOOTH RIDDLE HERE)
       `,
       exits: [
         { dir: 'escape', id: 'gameStart' }
