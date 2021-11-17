@@ -166,10 +166,10 @@ To explore type GO EAST, WEST, NORTH or SOUTH.
 
 When your dive is complete, type GO SURFACE.
 
-To begin, enter BEGIN
+To begin, enter GO ESCAPE
       `,
       exits: [
-        { dir: 'dive', id: 'gameStart' }
+        { dir: 'escape', id: 'gameStart' }
       ]
     },
     {
