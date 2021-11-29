@@ -178,16 +178,16 @@ These are new and treacherous depths. The water is freezing even through your eq
 Do you go East, West, North or South?
       `, 
       exits: [
-        { dir: 'east', id: 'coralReef' },
-        { dir: 'west', id: 'expanseWest' },
-        { dir: 'north', id: 'expanseNorth' },
-        { dir: 'south', id: 'coolRock' }
+        { dir: 'east', id: 'ccStation' },
+        { dir: 'west', id: 'escalator' },
+        { dir: 'north', id: 'rugglesPizza' },
+        { dir: 'south', id: 'bench' }
         
       ]
     },
     {
-      name: 'Coral Reef',
-      id: 'coralReef',
+      name: 'Charlie Card Stations',
+      id: 'ccStation',
       img: '',
       desc: `
         You approach a majestic reef made up of deep water coral. A school of luminous fish, forever untouched by the light of the sun and unseen by human eyes up until now, swim nimbly about its glorious spires.
@@ -195,28 +195,28 @@ Do you go East, West, North or South?
       `,
       exits: [
         { dir: 'west', id: 'gameStart' },
-        { dir: 'north', id: 'incomprehensibleWhale' },
-        { dir: 'south', id: 'plasticBottle' }
+        { dir: 'north', id: 'dunkinDonuts' },
+        { dir: 'south', id: 'ogPlatform' }
         
       ]
     },
     {
-      name: 'Cool Rock',
-      id: 'coolRock',
+      name: 'Bench',
+      id: 'bench',
       img: '',
       desc: `
         You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It is difficult to describe what makes it so cool, but it is really ultra cool, you are certain of that.
         Do you take action here or go East, West, North or South?
       `,
       exits: [
-        { dir: 'east', id: 'plasticBottle' },
-        { dir: 'west', id: 'prehistoricKelpForest' },
+        { dir: 'east', id: 'ogPlatform' },
+        { dir: 'west', id: 'fhPlatform' },
         { dir: 'north', id: 'gameStart' }   
       ]
     },
      {
-      name: 'Expanse West',
-      id: 'expanseWest',
+      name: 'Escalator',
+      id: 'escalator',
       img: '',
       desc: `
         This is the edge of oblivion. You are meant to explore uncharted territory, but there is nothing here to take note of.
@@ -225,13 +225,13 @@ Do you go East, West, North or South?
       `,
       exits: [
         { dir: 'east', id: 'gameStart' },
-        { dir: 'north', id: 'ancientShark' },
-        { dir: 'south', id: 'prehistoricKelpForest' }      
+        { dir: 'north', id: 'tixBooth' },
+        { dir: 'south', id: 'fhPlatform' }      
       ]
     },
     {
-      name: 'Expanse North',
-      id: 'expanseNorth',
+      name: 'Ruggles Pizza & Cafe',
+      id: 'rugglesPizza',
       img: '',
       desc: `
         This is the edge of oblivion. You are meant to explore uncharted territory, but there is nothing here to take note of.
@@ -239,8 +239,8 @@ Do you go East, West, North or South?
 
       `,
       exits: [
-        { dir: 'east', id: 'incomprehensibleWhale' },
-        { dir: 'west', id: 'ancientShark' },
+        { dir: 'east', id: 'dunkinDonuts' },
+        { dir: 'west', id: 'tixBooth' },
         { dir: 'south', id: 'gameStart' }     
       ]
     },
@@ -255,53 +255,53 @@ Do you go East, West, North or South?
 
       `,
       exits: [
-        { dir: 'east', id: 'plasticBottle' },
-        { dir: 'west', id: 'prehistoricKelpForest' },
+        { dir: 'east', id: 'ogPlatform' },
+        { dir: 'west', id: 'fhPlatform' },
         { dir: 'north', id: 'gameStart' }       
       ]
     },
      {
-      name: 'Ancient Shark of Numberless Teeth',
-      id: 'ancientShark',
+      name: 'Ticket Booth',
+      id: 'tixBooth',
       desc: `
          In front of you is what you believe must be a shark, but it only loosely fits that definition as you are familiar with it. Its mouth makes up more than half of its body, and its rows of teeth are innumerable. Its fins are disproportionately small and they flail ineffectively as it moves slowly, haltingly through the water.
          Do you take action here or go East, West, North or South?
       `,
       exits: [
-        { dir: 'east', id: 'expanseNorth' },
-        { dir: 'south', id: 'expanseWest' }        
+        { dir: 'east', id: 'rugglesPizza' },
+        { dir: 'south', id: 'escalator' }        
       ]
     },
     {
-      name: 'Incomprehensible Whale',
-      id: 'incomprehensibleWhale',
+      name: 'Dunkin Donuts',
+      id: 'dunkinDonuts',
       img: '',
       desc: `
          A whale? Perhaps? If it is a whale it is a whale larger than any whale you have seen or even conceived of. In reality you have no idea at all. The size of this whale is larger than your concept of large. To try to take it all in with your eyes is to attempt the impossible. You will never know its scope.
          Do you take action here or go East, West, North or South?
       `,
       exits: [
-        { dir: 'west', id: 'expanseNorth' },
-        { dir: 'south', id: 'coralReef' }     
+        { dir: 'west', id: 'rugglesPizza' },
+        { dir: 'south', id: 'ccStation' }     
       ]
     },
     {
-      name: 'Plastic Bottle',
-      id: 'plasticBottle',
+      name: 'Oak Grove Platform',
+      id: 'ogPlatform',
       img: '',
       desc: `
          Suspended in the darkness is a translucent green plastic bottle. Litter.
          Do you take action here or go East, West, North or South?
       `,
       exits: [
-        { dir: 'west', id: 'coolRock' },
-        { dir: 'north', id: 'coralReef' }
+        { dir: 'west', id: 'bench' },
+        { dir: 'north', id: 'ccStation' }
         
       ]
     },
     {
-      name: 'Prehistoric Kelp Forest',
-      id: 'prehistoricKelpForest',
+      name: 'Forest Hills Platform',
+      id: 'fhPlatform',
       img: '',
       desc: `
          You find yourself lost in a forest of towering, anchored kelp. These must be as old or older than the Redwoods of California. The foreboding feeling you get when you try to look past the first few rows of plants reminds you of the fear you felt for the woods behind the house you grew up in. 
@@ -309,8 +309,8 @@ Do you go East, West, North or South?
 
       `,
       exits: [
-        { dir: 'east', id: 'coolRock' },
-        { dir: 'north', id: 'expanseWest' }
+        { dir: 'east', id: 'bench' },
+        { dir: 'north', id: 'escalator' }
         
       ]
     },
