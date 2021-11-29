@@ -264,6 +264,7 @@ Do you go East, West, North or South?
      {
       name: 'Ticket Booth',
       id: 'tixBooth',
+      img: '',
       desc: `
          You enter the ticket booth! 
          Do you take action here or go East, West, North or South?
@@ -278,7 +279,7 @@ Do you go East, West, North or South?
       id: 'dunkinDonuts',
       img: '',
       desc: `
-         You stand in front of Dunkin Donuts and the aroma of coffee floods 
+         You stand in front of Dunkin Donuts and the aroma of coffee floods your senses.
          Do you take action here or go East, West, North or South?
       `,
       exits: [
@@ -291,7 +292,7 @@ Do you go East, West, North or South?
       id: 'ogPlatform',
       img: '',
       desc: `
-         Suspended in the darkness is a translucent green plastic bottle. Litter.
+         You end up on the Oak Grove platform, the train's coming soon!
          Do you take action here or go East, West, North or South?
       `,
       exits: [
@@ -305,7 +306,7 @@ Do you go East, West, North or South?
       id: 'fhPlatform',
       img: '',
       desc: `
-         You find yourself lost in a forest of towering, anchored kelp. These must be as old or older than the Redwoods of California. The foreboding feeling you get when you try to look past the first few rows of plants reminds you of the fear you felt for the woods behind the house you grew up in. 
+         You end up on the Oak Grove platform, the train's coming soon!
          Do you take action here or go East, West, North or South?
 
       `,
@@ -313,6 +314,36 @@ Do you go East, West, North or South?
         { dir: 'east', id: 'bench' },
         { dir: 'north', id: 'escalator' }
         
+      ]
+    },,
+    {
+      name: 'Ruggles Pizza & Cafe',
+      id: 'rugglesPizza',
+      img: '',
+      desc: `
+        You enter Ruggles Pizza & Cafe! So yum!
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'east', id: 'dunkinDonuts' },
+        { dir: 'west', id: 'tixBooth' },
+        { dir: 'south', id: 'gameStart' }     
+      ]
+    },
+    {
+      name: 'TRAIN TO OAK GROVE!',
+      id: 'trainIntro',
+      img: '',
+      desc: `
+        You enter Ruggles Pizza & Cafe! So yum!
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'east', id: 'dunkinDonuts' },
+        { dir: 'west', id: 'tixBooth' },
+        { dir: 'south', id: 'gameStart' }     
       ]
     },
   ],
