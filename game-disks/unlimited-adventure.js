@@ -167,13 +167,13 @@ Your first challenge (INSERT POLICE BOOTH RIDDLE HERE)
       ]
     },
     {
-      name: 'The Ocean Depths',
+      name: 'Ruggles',
       id: 'gameStart',
       img: `
 
 `,
       desc: `
-These are new and treacherous depths. The water is freezing even through your equipment, and it is difficult to see more 5 meters in front of you. Uncertainty lies in every direction, but you must start somewhere. 
+You've been in Ruggles before, but today it's especially mysterious.
 
 Do you go East, West, North or South?
       `, 
@@ -190,7 +190,7 @@ Do you go East, West, North or South?
       id: 'ccStation',
       img: '',
       desc: `
-        You approach a majestic reef made up of deep water coral. A school of luminous fish, forever untouched by the light of the sun and unseen by human eyes up until now, swim nimbly about its glorious spires.
+        You walk toward the Charlie Card Refill Stations.
         Do you take an action here or go East, West, North or South?
       `,
       exits: [
@@ -205,7 +205,7 @@ Do you go East, West, North or South?
       id: 'bench',
       img: '',
       desc: `
-        You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It is difficult to describe what makes it so cool, but it is really ultra cool, you are certain of that.
+        You approach a bench, it's super comfy looking, for a bench at least.
         Do you take action here or go East, West, North or South?
       `,
       exits: [
@@ -219,7 +219,8 @@ Do you go East, West, North or South?
       id: 'escalator',
       img: '',
       desc: `
-        This is the edge of oblivion. You are meant to explore uncharted territory, but there is nothing here to take note of.
+        You stumble upon the escalators leading to Northeastern University's campus. An unknown force prevents you from proceeding
+        in this direction.
         Do you take action here or go East, West, North or South?
 
       `,
@@ -234,7 +235,7 @@ Do you go East, West, North or South?
       id: 'rugglesPizza',
       img: '',
       desc: `
-        This is the edge of oblivion. You are meant to explore uncharted territory, but there is nothing here to take note of.
+        You enter Ruggles Pizza & Cafe! So yum!
         Do you take action here or go East, West, North or South?
 
       `,
@@ -245,11 +246,11 @@ Do you go East, West, North or South?
       ]
     },
     {
-      name: 'Cool Rock',
-      id: 'coolRock',
+      name: 'Bench',
+      id: 'bench',
       img: '',
       desc: `
-        You come across a rocky outcrop. Perched on top is an astoundingly cool rock. It is difficult to describe what makes it so    cool, but it is really ultra cool, you are certain of that.
+        You come across a bench! Good job, it's a really neat bench as far as train station benches go. 
         Do you take action here or go East, West, North or South?
 
 
@@ -264,7 +265,7 @@ Do you go East, West, North or South?
       name: 'Ticket Booth',
       id: 'tixBooth',
       desc: `
-         In front of you is what you believe must be a shark, but it only loosely fits that definition as you are familiar with it. Its mouth makes up more than half of its body, and its rows of teeth are innumerable. Its fins are disproportionately small and they flail ineffectively as it moves slowly, haltingly through the water.
+         You enter the ticket booth! 
          Do you take action here or go East, West, North or South?
       `,
       exits: [
@@ -277,7 +278,7 @@ Do you go East, West, North or South?
       id: 'dunkinDonuts',
       img: '',
       desc: `
-         A whale? Perhaps? If it is a whale it is a whale larger than any whale you have seen or even conceived of. In reality you have no idea at all. The size of this whale is larger than your concept of large. To try to take it all in with your eyes is to attempt the impossible. You will never know its scope.
+         You stand in front of Dunkin Donuts and the aroma of coffee floods 
          Do you take action here or go East, West, North or South?
       `,
       exits: [
