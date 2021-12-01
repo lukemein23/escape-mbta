@@ -406,9 +406,34 @@ Do you go East, West, North or South?
 
       `,
       exits: [
-        { dir: 'east', id: 'dunkinDonuts' },
-        { dir: 'west', id: 'tixBooth' },
-        { dir: 'south', id: 'gameStart' }     
+        { dir: 'east', id: 'car2' }  
+      ]
+    },
+    {
+      name: 'Car 2',
+      id: 'car2',
+      img: '',
+      desc: `
+        Welcome to the second train car.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'west', id: 'trainIntro' }, 
+        { dir: 'east', id: 'car3' },  
+      ]
+    },
+    {
+      name: 'Car 3',
+      id: 'car3',
+      img: '',
+      desc: `
+        Welcome to the second train car.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'west', id: 'car2' }
       ]
     },
   ], 
