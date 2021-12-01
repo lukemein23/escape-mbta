@@ -380,7 +380,7 @@ Do you go East, West, North or South?
         { dir: 'north', id: 'escalator' }
         
       ]
-    },,
+    },
     {
       name: 'Ruggles Pizza & Cafe',
       id: 'rugglesPizza',
@@ -401,7 +401,7 @@ Do you go East, West, North or South?
       id: 'trainIntro',
       img: '',
       desc: `
-        You enter Ruggles Pizza & Cafe! So yum!
+        You've made it to the second stage of the game - the train to Oak Grove!
         Do you take action here or go East, West, North or South?
 
       `,
@@ -411,5 +411,5 @@ Do you go East, West, North or South?
         { dir: 'south', id: 'gameStart' }     
       ]
     },
-  ],
+  ], 
 };
