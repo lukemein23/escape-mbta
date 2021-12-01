@@ -278,6 +278,71 @@ Do you go East, West, North or South?
       name: 'Dunkin Donuts',
       id: 'dunkinDonuts',
       img: '',
+      items: [        
+        { name: 'key', 
+           use: ({disk, println, getRoom, enterRoom}) => {
+            const room = getRoom(disk.roomId);
+            if (room.id == 'gameStart') {
+            println('There is nothing to unlock here.');
+            return;
+          }  else if (room.id == 'gameStart') {
+            println('There is nothing to unlock here.');
+            return;
+              
+          } 
+             else if (room.id == 'ccStation') {
+            println('There is nothing to unlock here.');
+            return;
+              
+          }  else if (room.id == 'escalator') {
+            println('There is nothing to unlock here.');
+            return;
+              
+          }
+             else if (room.id == 'rugglesPizza') {
+            println('There is nothing to unlock here.');
+            return;
+              
+          }
+             else if (room.id == 'bench') {
+            println('There is nothing to unlock here.');
+                var item = {name: 'cool rock'}
+                disk.inventory.push(item);
+                println(`You took the ${item.name}.`);
+            return;
+              
+          }
+             else if (room.id == 'tixBooth') {
+            println('You have unlocked the ticket booth, you step inside...');
+            enterRoom('diveIntro');
+              
+          }
+             else if (room.id == 'dunkinDonuts') {
+            println('There is nothing to unlock here.');
+            return;
+              
+          }
+              else if (room.id == 'ogPlatform') {
+            println('There is nothing to unlock here.');
+                var item = {name: 'plastic bottle'}
+                disk.inventory.push(item);
+                println(`You took the ${item.name}.`);
+            return;
+              
+          }
+             else if (room.id == 'fhPlatform') {
+            println('There is nothing to unlock here');
+                var item = {name: 'kelp'}
+                disk.inventory.push(item);
+                println(`You took the ${item.name}.`);
+            return;
+              
+          }
+             else {
+             console.log(room.id)
+          }
+        }}
+  ],
       desc: `
          You stand in front of Dunkin Donuts and the aroma of coffee floods your senses.
          Do you take action here or go East, West, North or South?
