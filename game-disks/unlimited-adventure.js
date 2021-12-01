@@ -160,7 +160,7 @@ const unlimitedAdventure = {
       desc: `
 Welcome, fellow huskies! Your challenge today is to escape Ruggles and embark on a quest to find the train stop that will reveal the hidden treasure. During your commute via MBTA, you stumble upon some clues that guide you to your final destination. 
 
-Your first challenge (INSERT POLICE BOOTH RIDDLE HERE)
+Type "go escape" to begin your journey.
       `,
       exits: [
         { dir: 'escape', id: 'gameStart' }
@@ -211,7 +211,7 @@ Do you go East, West, North or South?
       exits: [
         { dir: 'east', id: 'ogPlatform' },
         { dir: 'west', id: 'fhPlatform' },
-        { dir: 'north', id: 'gameStart' }   
+        { dir: 'north', id: 'gameStart' },
       ]
     },
      {
