@@ -168,6 +168,9 @@ const loadDisk = (disk, config = {}) => {
             `;
             println(instructions);
           },
+          hint(){
+            println("Ever heard of a nut with a hole?")
+          }
         };
         exec(cmds[cmd]);
       },
