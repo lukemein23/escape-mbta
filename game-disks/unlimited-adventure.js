@@ -154,9 +154,7 @@ const unlimitedAdventure = {
     {
       name: 'ESCAPE THE MBTA!',
       id: 'diveIntro',
-      img: `
-
-      `,
+      img: '',
       desc: `
 Welcome, fellow huskies! Your challenge today is to escape Ruggles and embark on a quest to find the train stop that will reveal the hidden treasure. During your commute via MBTA, you stumble upon some clues that guide you to your final destination. 
 
