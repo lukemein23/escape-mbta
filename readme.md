@@ -1,4 +1,6 @@
-#Escape the MBTA
+# Escape the MBTA
+
+_scroll for game info_
 
 <img src="https://cdn.glitch.me/0d912267-7ceb-4ef0-87ba-924a786d3765%2Fmagnet-t-logos.webp?v=1638847770161">
 
@@ -9,7 +11,7 @@ This digital escape room was designed by Abbie Tyler, Luke Meininger, Lulwa Algh
 It is inspired by “dive the game” which is an underwater diving game we remixed on glitch.
 We hope you have as much fun playing as we did designing the game!
 
-#### [SPOILER ALERTS included in this tutorial]
+#### [SPOILER ALERT: Obvious clues included in this tutorial, read at your own risk!]
 
 ![Game Map](https://cdn.glitch.me/0d912267-7ceb-4ef0-87ba-924a786d3765%2F9d4c98e5-3b3c-41b9-b3f0-ab3f9173b4cb.image.png?v=1638847402098)
 
@@ -31,6 +33,6 @@ Abbie Tyler + Luke Meininger + Lulwa Alghanim + Zakiya Sheikh
 
 ### Acknowledgments
 
-- Built off of [Text Engine](https://github.com/okaybenji/text-engine), thank you [Benji Kay](http://benjikay.com/)!
+- Built off of [Text Engine](https://github.com/okaybenji/text-engine) from Github, thank you [Benji Kay](http://benjikay.com/)!
+- This game is inspired by (and remixed off of) [Dive the Game](https://glitch.com/~dive-the-game) on Glitch. Thank you Robert Norman + Eve Ahearn!!
 - Apple { font by Zeb downloaded from [dafont.com](http://www.dafont.com/apple.font). }
-- This game is ispired by “dive the game” on Glitch. Thank you Robert Norman + Eve Ahearn!!
