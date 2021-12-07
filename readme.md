@@ -1,6 +1,6 @@
-# Escape the MBTA
+#Escape the MBTA
 
-<img src="https://cdn.glitch.me/0d912267-7ceb-4ef0-87ba-924a786d3765%2Fmagnet-t-logos.webp?v=1638847770161" width="00">
+<img src="https://cdn.glitch.me/0d912267-7ceb-4ef0-87ba-924a786d3765%2Fmagnet-t-logos.webp?v=1638847770161">
 
 ## The Game
 
