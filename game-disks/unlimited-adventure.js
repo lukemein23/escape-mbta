@@ -154,7 +154,12 @@ const unlimitedAdventure = {
     {
       name: 'ESCAPE THE MBTA!',
       id: 'diveIntro',
-      img: '___',
+      img: `
+      ____
+      |DD|____T_
+      |_ |_____|<
+        @-@-@-oo\
+        `,
       desc: `
 Welcome, fellow huskies! Your challenge today is to escape Ruggles and embark on a quest to find the train stop that will reveal the hidden treasure. During your commute via MBTA, you stumble upon some clues that guide you to your final destination. 
 
@@ -168,7 +173,10 @@ Type "go escape" to begin your journey.
       name: 'Ruggles',
       id: 'gameStart',
       img: `
-
+____
+|DD|____T_
+|_ |_____|<
+  @-@-@-oo\
 `,
       desc: `
 You've been in Ruggles before, but today it's especially mysterious.
@@ -186,7 +194,13 @@ Do you go East, West, North or South?
     {
       name: 'Charlie Card Stations',
       id: 'ccStation',
-      img: '',
+      img: `
+     -----------
+    |    ---    |
+    |   |       |
+    |    ---    |
+     -----------
+      `,
       desc: `
         You walk toward the Charlie Card Refill Stations.
         Do you take an action here or go East, West, North or South?
@@ -215,7 +229,13 @@ Do you go East, West, North or South?
      {
       name: 'Escalator',
       id: 'escalator',
-      img: '',
+      img: `
+           ---
+          |
+        --
+       |
+     --
+      `,
       desc: `
         You stumble upon the escalators leading to Northeastern University's campus. An unknown force prevents you from proceeding
         in this direction.
