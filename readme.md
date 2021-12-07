@@ -34,5 +34,5 @@ Abbie Tyler + Luke Meininger + Lulwa Alghanim + Zakiya Sheikh
 ### Acknowledgments
 
 - Built off of [Text Engine](https://github.com/okaybenji/text-engine) from Github, thank you [Benji Kay](http://benjikay.com/)!
-- This game is inspired by (and remixed off of) [Dive the Game](https://glitch.com/~dive-the-game) on Glitch. Thank you Robert Norman + Eve Ahearn!!
+- This game is inspired by (and remixed off of) [Dive the Game](https://glitch.com/~dive-the-game) on Glitch. Thank you [Robert Norman](https://glitch.com/@wednesdays4ever) + [Eve Ahearn](https://glitch.com/@eveahe)!!
 - Apple { font by Zeb downloaded from [dafont.com](http://www.dafont.com/apple.font). }
