@@ -156,7 +156,7 @@ const unlimitedAdventure = {
       id: 'diveIntro',
       img: `
       ____
-      |DD|____T_
+      |  |____T_
       |_ |_____|<
         @-@-@-oo\
         `,
@@ -174,7 +174,7 @@ Type "go escape" to begin your journey.
       id: 'gameStart',
       img: `
 ____
-|DD|____T_
+|R |____T_
 |_ |_____|<
   @-@-@-oo\
 `,
@@ -251,7 +251,13 @@ Do you go East, West, North or South?
     {
       name: 'Ruggles Pizza & Cafe',
       id: 'rugglesPizza',
-      img: '',
+      img: `
+         // ""--.._
+        ||  (_)  _ "-._
+        ||    _ (_)    '-.
+        ||   (_)   __..-'
+         \\__..--""
+         `,
       desc: `
         You enter Ruggles Pizza & Cafe! So yum!
         Do you take action here or go East, West, North or South?
@@ -282,7 +288,13 @@ Do you go East, West, North or South?
      {
       name: 'Ticket Booth',
       id: 'tixBooth',
-      img: '',
+      img:  `
+         ____
+         |""| 
+         |""|      
+         |""|      
+        "'""'""
+      `,
       desc: `
          You enter the ticket booth! 
          Do you take action here or go East, West, North or South?
@@ -295,7 +307,17 @@ Do you go East, West, North or South?
     {
       name: 'Dunkin Donuts',
       id: 'dunkinDonuts',
-      img: '',
+      img: `
+               )  (
+             (   ) )
+              ) ( (
+         mrf_______)_
+         .-'---------|  
+        ( C|/\/\/\/\/|
+         '-./\/\/\/\/|
+           '_________'
+            '-------'
+      `,
       items: [        
         { name: 'key', 
            use: ({disk, println, getRoom, enterRoom}) => {
@@ -373,7 +395,12 @@ Do you go East, West, North or South?
     {
       name: 'Oak Grove Platform',
       id: 'ogPlatform',
-      img: '',
+      img: `
+____
+|OG|____T_
+|_ |_____|<
+  @-@-@-oo\
+`,
       desc: `
          You end up on the Oak Grove platform, the train's coming soon!
          Do you take action here or go East, West, North or South?
@@ -387,7 +414,12 @@ Do you go East, West, North or South?
     {
       name: 'Forest Hills Platform',
       id: 'fhPlatform',
-      img: '',
+      img: `
+____
+|FH|____T_
+|_ |_____|<
+  @-@-@-oo\
+`,
       desc: `
          You end up on the Oak Grove platform, the train's coming soon!
          Do you take action here or go East, West, North or South?
@@ -402,7 +434,13 @@ Do you go East, West, North or South?
     {
       name: 'Ruggles Pizza & Cafe',
       id: 'rugglesPizza',
-      img: '',
+      img: `
+         // ""--.._
+        ||  (_)  _ "-._
+        ||    _ (_)    '-.
+        ||   (_)   __..-'
+         \\__..--""
+         `,
       desc: `
         You enter Ruggles Pizza & Cafe! So yum!
         Do you take action here or go East, West, North or South?
@@ -417,7 +455,12 @@ Do you go East, West, North or South?
     {
       name: 'TRAIN TO OAK GROVE!',
       id: 'trainIntro',
-      img: '',
+      img: `
+____
+|OG|____T_
+|_ |_____|<
+  @-@-@-oo\
+`,
       desc: `
         You've made it to the second stage of the game - the train to Oak Grove!
         Do you take action here or go East, West, North or South?
@@ -430,7 +473,12 @@ Do you go East, West, North or South?
     {
       name: 'Car 2',
       id: 'car2',
-      img: '',
+      img: `
+         o O___ _________
+       _][__|o| |O O O O|
+      <_______|-|_______|
+       /O-O-O     o   o
+      `,
       desc: `
         Welcome to the second train car.
         Do you take action here or go East, West, North or South?
@@ -444,7 +492,13 @@ Do you go East, West, North or South?
     {
       name: 'Car 3',
       id: 'car3',
-      img: '',
+      img: ` 
+           o O___ _________ _________
+         _][__|o| |O O O O| |O O O O|
+        <_______|-|_______|-|_______|   
+         /O-O-O     o   o     o  o
+       
+      `,
       desc: `
         Welcome to the second train car.
         Do you take action here or go East, West, North or South?
