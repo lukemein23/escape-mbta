@@ -23,6 +23,10 @@ Type "go escape" to begin your journey.
     {
       name: 'Ruggles',
       id: 'gameStart',
+      onEnter: ({}) => {
+        var audio = new Audio('audio_file.mp3');
+        audio.play();
+    return;}, 
       img: `
 ____
 |R |____T_

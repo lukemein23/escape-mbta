@@ -14,26 +14,6 @@ body {
   line-height: 4vh;
 }
 
-
-.train {
-  position: absolute;
-  top: 10;
-  left: ;
-  width: 100%;
-  margin: 5% 10% 5% -8%;
-  opacity: 100%;
-  
-}
-
-.person {
-  position: relative;
-  top: 300;
-  left: 500;
-  width: 30%;
-  margin: 25% 10% 5% 15%;
-  opacity: 100%;
-}
-
 .img {
   white-space: pre;
   display: inline-block;
