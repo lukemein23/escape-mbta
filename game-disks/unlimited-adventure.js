@@ -600,8 +600,7 @@ ____
          
          "You inventory is lacking in shapes with no sides."
          
-         This seems like some sort of clue. It would be a risky move to dismount this ad from the wall and stash it in your inventory... but it's definitely a possible and understandable option if you want to 
-         
+         This seems like some sort of clue. It would be a risky move to dismount this ad from the wall and stash it in your inventory... but it's definitely a possible and understandable option if you want to look at it later.
          `,
          isTakeable: true
         }  
