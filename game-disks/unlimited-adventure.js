@@ -449,17 +449,20 @@ ____
            desc: 'It`s a regular old U.S. dollar bill.',
           use: ({disk, getRoom, getItem, println, enterRoom}) => {
             const room = getRoom(disk.roomId);
-            if (room.id == 'performer' && disk.inventory.includes(getItem('quarter')) && disk.inventory.includes(getItem('frisbee')) && disk.inventory.includes(getItem('token'))) {
-            println('You place the dollar in the performer`s hat and he hands you a Charlie Card with unlimited value... He also snaps his fingers and a section of the wall next to him gives way to a hidden passage... You step through this entryway.');
-            enterRoom('gameWin');
-            return;
-            }
-             else if (room.id == 'performer') {
-               println('As you go to place the the dollar in the performer`s hat, he stops you and tells you this: "I will not accept your bill until you have obtained three objects whose colors play a large role in this station."');
+            // if (room.id == 'performer' && disk.inventory.includes(getItem('quarter')) && disk.inventory.includes(getItem('frisbee')) && disk.inventory.includes(getItem('token'))) {
+            // println('You place the dollar in the performer`s hat and he hands you a Charlie Card with unlimited value... He also snaps his fingers and a section of the wall next to him gives way to a hidden passage... You step through this entryway.');
+            // enterRoom('gameWin');
+            // return;
+            // }
+            // else
+               if (room.id == 'performer') {
+               println('hoii');
+               //println('As you go to place the the dollar in the performer`s hat, he stops you and tells you this: "I will not accept your bill until you have obtained three objects whose colors play a large role in this station."');
                return;
              }
             else {
-              println('You pull the dollar out and look at it... it`s a pretty classic bill... You put it back in your inventory.')
+              println('You pull the dollar out and look at it... it`s a pretty classic bill... You put it back in your inventory.');
+              return;
             }
         },
          isTakeable: true
@@ -601,7 +604,7 @@ ____
       exits: [
         { dir: 'west', id: 'slPlatform' },
         { dir: 'east', id: 'escalator2' },
-        { dir: 'north', id: 'ccStation' }
+        { dir: 'north', id: 'ccStation2' }
       ]
     },
         {
@@ -645,6 +648,35 @@ ____
             {
       name: 'Ticket Booth Interior',
       id: 'boothInterior',
+      img: ``,
+      items: [        
+        { name: 'note', 
+           desc: `You take a look at the note...
+            
+            "The first word of the correct platform can be found in the first word of the incorrect platform."
+            
+            This seems to be some sort of clue, you should take it so you can look at it again later.
+            
+            Type "go exit" to step outside of the ticket booth`,
+         isTakeable: true
+        }
+         
+  ],
+      desc: `
+        Here you are, inside the ticket booth. It's more or less what you expected, nothing to write home about.
+        
+        You do a 360 spin to take in the room and, just as you're about to finish your investigative pirouette, you notice a really cool note taped to a desk. 
+        
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'exit', id: 'tixBooth' }
+      ]
+    },
+                {
+      name: 'Game Won!',
+      id: 'gameWin',
       img: ``,
       items: [        
         { name: 'note', 
