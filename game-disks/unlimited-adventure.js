@@ -402,8 +402,13 @@ ____
       /    /(  O ))   /  )(  ) __ (
       \_)__) \__/(__\_) (__) \_)(_/
       `,
+      items: [               
+        { name: 'quarter', 
+         isTakeable: true
+        }         
+  ],
       desc: `
-        You step into a wide hallway.
+        You step into a wide hallway. You see a quarter on the ground... it's super silver.
         Do you take action here or go East, West, North or South?
 
       `,
@@ -421,7 +426,12 @@ ____
       |R |____T_
       |_ |_____|<
         @-@-@-oo\
-`,
+`,     
+      items: [               
+        { name: 'd', 
+         isTakeable: true
+        }         
+  ],
       desc: `
         You step onto the Red Line platform.
         Do you take action here or go East, West, North or South?
@@ -441,6 +451,11 @@ ____
       \ /\ / ) _) \___ \  )(  
       (_/\_)(____)(____/ (__) 
       `,
+      items: [               
+        { name: 'token', 
+         isTakeable: true
+        }         
+  ],
       desc: `
         You step into a wide hallway. You see a red token on the ground.
         
@@ -463,8 +478,13 @@ ____
     |    ---    |
      -----------
       `,
+      items: [               
+        { name: 'plush', 
+         isTakeable: true
+        }         
+  ],
       desc: `
-        You approach a set of Charlie Card Stations.
+        You approach a set of Charlie Card Stations. Resting atop one of these stations is a blue plush.
         Do you take action here or go East, West, North or South?
 
       `,
@@ -488,6 +508,8 @@ ____
         Do you take action here or go East, West, North or South?
 
       `,
+          
+          
       exits: [
         { dir: 'north', id: 'rlPlatform' },
         { dir: 'west', id: 'ccStation2' },
@@ -503,8 +525,13 @@ ____
       |_ |_____|<
         @-@-@-oo\
 `,
+      items: [               
+        { name: 'figurine', 
+         isTakeable: true
+        }         
+  ],
       desc: `
-        You step onto the Silver Line platform.
+        You step onto the Silver Line platform. You spot a purple figurine on a bench.
         Do you take action here or go East, West, North or South?
 
       `,
@@ -522,8 +549,13 @@ ____
       \___ \(  O )) \/ (  )(  ) __ (
       (____/ \__/ \____/ (__) \_)(_/
       `,
+      items: [               
+        { name: 'frisbee', 
+         isTakeable: true
+        }         
+  ],
       desc: `
-        You step into a wide hallway.
+        You step into a wide hallway. You see an orange frisbee on the ground.
         Do you take action here or go East, West, North or South?
 
       `,
@@ -543,8 +575,13 @@ ____
        |
      --
      `,
+      items: [               
+        { name: 'cube', 
+         isTakeable: true
+        }         
+  ],
       desc: `
-        You're standing in front of the escalators leading up to the street.
+        You're standing in front of the escalators leading up to the street. You notice a green cube sitting off to the side.
         
         Do you take action here or go East, West, North or South?
 
