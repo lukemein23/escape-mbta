@@ -140,7 +140,7 @@ Do you go East, West, North or South?
             return;
           }
         },
-        isTakeable: true}
+       isTakeable: true}
   ],
       desc: `
         You enter Ruggles Pizza & Cafe! So yum! There's a box of disposable face masks on the counter.
@@ -316,27 +316,59 @@ ____
        
       `,
        items: [        
-        { name: 'RoboButton', 
-         
+                { name: 'key2', 
+           use: ({disk, println, getRoom, enterRoom}) => {
+            const room = getRoom(disk.roomId);
+            if (room.id == 'tixBooth') {
+            println('You have unlocked the ticket booth, you step inside...');
+            enterRoom('boothInterior');
+            return;
+          }  
+             else {
+            println('There is nothing to unlock here.');
+            return;
+          }
+        },
+        isTakeable: true},
+         { name: 'RoboButton', 
            use: ({disk, println, getRoom}) => {
             const room = getRoom(disk.roomId);
-            if (room.id == 'car')
+            if (room.id == 'car3') {
             println('RoboButton is out of commission... beep beep beep.');
             return;
-        },
+            }
+             else {
+               println('Woah! Are you even human? It should be impossible for this line to be printed!');
+               return;
+             }
+        }
         },
          { name: 'MegaButton', 
-           use: ({println}) => {
+           use: ({disk, getRoom, println}) => {
+            const room = getRoom(disk.roomId);
+            if (room.id == 'car3') {
             println('Upon pressing MegaButton you realize its not actually a button at all, just a soda bottle cap masquerading as a button... MegaButton? More like MegaPoser.');
             return;
-        },
+            }
+            else {
+               println('Woah! Are you even human? It should be impossible for this line to be printed!');
+               return;
+             }
+        }
         },
          { name: 'Buttonator', 
-           use: ({println, enterRoom}) => {
+           use: ({disk, getRoom, println, enterRoom}) => {
+            const room = getRoom(disk.roomId);
+            if (room.id == 'car3') {
             println('You press Buttonator and the floor turns bright green... after about forty seconds the train doors open and you step into the Downtown Crossing Station.');
             enterRoom('olPlatform');
             return;
-        },
+            }
+             else {
+               println('Woah! Are you even human? It should be impossible for this line to be printed!');
+               return;
+             }
+        }
         }
          
   ],
