@@ -72,8 +72,22 @@ Do you go East, West, North or South?
       ) _ ( ) _) /    /( (__ ) __ (
      (____/(____)\_)__) \___)\_)(_/
       `,
+      items: [        
+        { name: 'rock', 
+           desc: `You take a look at the rock...
+            
+            "You'll find something important in a place with squares on the outside that become circles when opened and turn into triangles when separated."
+            
+            This seems to be some sort of clue, you should take it so you can look at it again later.
+            
+            Type "go exit" to step outside of the ticket booth`,
+         isTakeable: true
+        }
+         
+  ],
       desc: `
-        You approach a bench, it's super comfy looking, for a bench at least.
+        You approach a bench, it's super comfy looking, for a bench at least. You take a closer look at the bench and notice there's a rock on it with some words etched into it... strange.
+  
         Do you take action here or go East, West, North or South?
       `,
       exits: [
@@ -125,27 +139,6 @@ Do you go East, West, North or South?
         { dir: 'south', id: 'gameStart' }     
       ]
     },
-    {
-      name: 'Bench',
-      id: 'bench',
-      img:`
-      ____  ____  __ _   ___  _  _ 
-     (  _ \(  __)(  ( \ / __)/ )( \
-      ) _ ( ) _) /    /( (__ ) __ (
-     (____/(____)\_)__) \___)\_)(_/
-      `,
-      desc: `
-        You come across a bench! Good job, it's a really neat bench as far as train station benches go. 
-        Do you take action here or go East, West, North or South?
-
-
-      `,
-      exits: [
-        { dir: 'east', id: 'ogPlatform' },
-        { dir: 'west', id: 'fhPlatform' },
-        { dir: 'north', id: 'gameStart' }       
-      ]
-    },
      {
       name: 'Ticket Booth',
       id: 'tixBooth',
@@ -157,7 +150,8 @@ Do you go East, West, North or South?
         "'""'""
       `,
       desc: `
-         You enter the ticket booth! 
+         You're outside of a chic ticket booth now, you'd prefer to be inside but the door appears to be locked.
+         
          Do you take action here or go East, West, North or South?
       `,
       exits: [
@@ -493,6 +487,7 @@ ____
      `,
       desc: `
         You're standing in front of the escalators leading up to the street.
+        
         Do you take action here or go East, West, North or South?
 
       `,
@@ -511,7 +506,9 @@ ____
             
             "The first word of the correct platform can be found in the first word of the incorrect platform."
             
-            This seems to be some sort of clue`,
+            This seems to be some sort of clue, you should take it so you can look at it again later.
+            
+            Type "go exit" to step outside of the ticket booth`,
          isTakeable: true
         }
          
@@ -524,8 +521,7 @@ ____
 
       `,
       exits: [
-        { dir: 'west', id: 'southHall' },
-        { dir: 'north', id: 'performer'}
+        { dir: 'exit', id: 'tixBooth' }
       ]
     },
   ], 
