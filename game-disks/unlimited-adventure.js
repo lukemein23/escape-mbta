@@ -138,7 +138,7 @@ Do you go East, West, North or South?
             return;
           }  
              else {
-            println('You try putting the mask on your face but it falls back into your inventory, it seems to only be usable in a certain location... weird');
+            println('You try putting the mask on your face but it falls back into your inventory, it seems to only be usable in a certain location... weird.');
             return;
           }
         },
@@ -292,12 +292,13 @@ ____
       `,
       items: [               
         { name: 'poster', 
+
            desc: `You take a closer look at the poster...
             
             "You're gonna wanna get off this train and go straight to Primark!"
             
             This seems to be some sort of clue, it'd be a bit bold to rip this poster off the wall but you could take it so you can look at it again later.`,
-         isTakeable: true
+             isTakeable: true
         }
          
   ],
@@ -330,7 +331,7 @@ ____
            use: ({disk, println, getRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'car3') {
-            println('RoboButton is out of commission... beep beep beep.');
+            println('robobutton is out of commission... beep beep beep.');
             return;
             }
              else {
@@ -342,9 +343,9 @@ ____
          { name: 'megabutton', 
             desc: 'You take a look at megabutton... something seems amiss.',
            use: ({disk, getRoom, println}) => {
-            const room = getRoom(disk.roomId);
+            const room = getRoom(disk.roomId); 
             if (room.id == 'car3') {
-            println('Upon pressing MegaButton you realize its not actually a button at all, just a soda bottle cap masquerading as a button... MegaButton? More like MegaPoser.');
+            println('Upon pressing megabutton you realize its not actually a button at all, just a soda bottle cap masquerading as a button... megabutton? More like MEGAPOSER.');
             return;
             }
             else {
@@ -358,7 +359,7 @@ ____
            use: ({disk, getRoom, println, enterRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'car3') {
-            println('You press Buttonator and the floor turns bright green... after about forty seconds the train doors open and you step into the Downtown Crossing Station.');
+            println('You press buttonator and the floor turns bright green... after about forty seconds the train doors open and you step into the Downtown Crossing Station.');
             enterRoom('olPlatform');
             return;
             }
@@ -409,11 +410,9 @@ ____
       name: 'North Hallway',
       id: 'northHall',
       img: `
-       __ _   __  ____  ____  _  _ 
-      (  ( \ /  \(  _ \(_  _)/ )( \
-      /    /(  O ))   /  )(  ) __ (
-      \_)__) \__/(__\_) (__) \_)(_/
+      -------------------
       
+      -------------------
       `,
       items: [               
         { name: 'quarter', 
@@ -452,7 +451,7 @@ ____
             return;
             }
              else if (room.id == 'performer') {
-               println('As you go to place the the dollar in the performer`s hat, he stops you and tells you this: "I will not accept your bill until you have obtained three objects of whose colors play a large role in this station."');
+               println('As you go to place the the dollar in the performer`s hat, he stops you and tells you this: "I will not accept your bill until you have obtained three objects whose colors play a large role in this station."');
                return;
              }
             else {
@@ -476,12 +475,9 @@ ____
       name: 'West Hallway',
       id: 'westHall',
       img: `
+      -------------------
       
-       _  _  ____  ____  ____ 
-      / )( \(  __)/ ___)(_  _)
-      \ /\ / ) _) \___ \  )(  
-      (_/\_)(____)(____/ (__) 
-      
+      -------------------
       `,
       items: [               
         { name: 'token',
@@ -583,12 +579,9 @@ ____
       name: 'South Hallway',
       id: 'southHall',
       img: `
+      -------------------
       
-       ____   __   _  _  ____  _  _ 
-      / ___) /  \ / )( \(_  _)/ )( \
-      \___ \(  O )) \/ (  )(  ) __ (
-      (____/ \__/ \____/ (__) \_)(_/
-      
+      -------------------
       `,
       items: [               
         { name: 'frisbee', 
