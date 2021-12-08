@@ -443,6 +443,7 @@ ____
       `,
       desc: `
         You step into a wide hallway.
+        
         Do you take action here or go East, West, North or South?
 
       `,
@@ -482,7 +483,8 @@ ____
          (__|||__) \|        
               `,
       desc: `
-        You walk towards someone performing.
+        You walk towards someone performing. They have a hat turned upside-down on the floor in front of them.
+        
         Do you take action here or go East, West, North or South?
 
       `,
