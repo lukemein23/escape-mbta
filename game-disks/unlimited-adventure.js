@@ -428,12 +428,24 @@ ____
         @-@-@-oo\
 `,     
       items: [               
-        { name: 'd', 
+        { name: 'dollar',
+          use: ({disk, getRoom, println, enterRoom}) => {
+            const room = getRoom(disk.roomId);
+            if (room.id == 'performer' && disk.inventory.contains('quarter')) {
+            println('You press Buttonator and the floor turns bright green... after about forty seconds the train doors open and you step into the Downtown Crossing Station.');
+            enterRoom('olPlatform');
+            return;
+            }
+             else {
+               println('Woah! Are you even human? It should be impossible for this line to be printed!');
+               return;
+             }
+        },
          isTakeable: true
         }         
   ],
       desc: `
-        You step onto the Red Line platform.
+        You step onto the Red Line platform. In front of your eyes, a loose dollar glides through the air and settles on the edge of a trash can without falling in.
         Do you take action here or go East, West, North or South?
 
       `,
@@ -453,6 +465,7 @@ ____
       `,
       items: [               
         { name: 'token', 
+         
          isTakeable: true
         }         
   ],
