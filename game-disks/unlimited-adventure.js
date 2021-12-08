@@ -281,8 +281,22 @@ ____
       <_______|-|_______|
        /O-O-O     o   o
       `,
+      items: [               
+        { name: 'poster', 
+           desc: `You take a closer look at the poster...
+            
+            "You're gonna wanna get off this train and go straight to Primark!"
+            
+            This seems to be some sort of clue, it'd be a bit bold to rip this poster off the wall but you could take it so you can look at it again later.`,
+         isTakeable: true
+        }
+         
+  ],
       desc: `
-        Welcome to the second train car. Comparing this train car to the first train car is like comparing a
+        Welcome to the second train car. Comparing this train car to the first train car is like comparing Nutella to Peanut Butter.
+        
+        You notice a poster on the wall that appears to have some text on it.
+        
         Do you take action here or go East, West, North or South?
 
       `,
@@ -302,7 +316,12 @@ ____
        
       `,
       desc: `
-        Welcome to the third train car.
+        Welcome to the third train car. It seems they've switched up their system...
+        
+        There are three buttons available for use, they're labeled with cute names too...
+        
+        You take a closer look at the buttons, theres 
+        
         Do you take action here or go East, West, North or South?
 
       `,
