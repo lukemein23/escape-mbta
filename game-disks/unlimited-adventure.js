@@ -507,10 +507,16 @@ ____
       img: ``,
       items: [        
         { name: 'note', 
-           onLook: ({println}) => {
-            println("")
-        },
-        isTakeable: true}
+           look: ({println}) => {
+            println(`You take a look at the note...
+            
+            "The first word of the correct platform can be found in the first word of the incorrect platform."
+            
+            This seems to be some sort of clue`)
+             return;
+        }
+        }
+         
   ],
       desc: `
         Here you are, inside the ticket booth. It's more or less what you expected, nothing to write home about.
