@@ -255,27 +255,6 @@ ____
       ]
     },
     {
-      name: 'Ruggles Pizza & Cafe',
-      id: 'rugglesPizza',
-      img: `
-         // ""--.._
-        ||  (_)  _ "-._
-        ||    _ (_)    '-.
-        ||   (_)   __..-'
-         \\__..--""
-         `,
-      desc: `
-        You enter Ruggles Pizza & Cafe! So yum!
-        Do you take action here or go East, West, North or South?
-
-      `,
-      exits: [
-        { dir: 'east', id: 'dunkinDonuts' },
-        { dir: 'west', id: 'tixBooth' },
-        { dir: 'south', id: 'gameStart' }     
-      ]
-    },
-    {
       name: 'TRAIN TO OAK GROVE!',
       id: 'trainIntro',
       img: `
@@ -303,7 +282,7 @@ ____
        /O-O-O     o   o
       `,
       desc: `
-        Welcome to the second train car.
+        Welcome to the second train car. Comparing this train car to the first train car is like comparing a
         Do you take action here or go East, West, North or South?
 
       `,
