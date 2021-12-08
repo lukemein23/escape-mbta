@@ -239,6 +239,9 @@ const loadDisk = (disk, config = {}) => {
               println(item.desc);
             }
           },
+          talk() {
+            
+          }
         };
         exec(cmds[cmd]);
       }
