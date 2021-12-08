@@ -23,8 +23,8 @@ Type "go escape" to begin your journey.
     {
       name: 'Ruggles',
       id: 'gameStart',
-      onEnter: ({}) => {
-        var audio = new Audio('audio_file.mp3');
+      onEnter: () => {
+        var audio = new Audio('assets/esm_8_bit_small_win_arcade_80s_simple_alert_notification_game.mp3');
         audio.play();
     return;}, 
       img: `
