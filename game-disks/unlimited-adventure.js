@@ -78,15 +78,13 @@ Do you go East, West, North or South?
             
             "You'll find something important in a place with squares on the outside that become circles when opened and turn into triangles when separated."
             
-            This seems to be some sort of clue, you should take it so you can look at it again later.
-            
-            Type "go exit" to step outside of the ticket booth`,
+            This seems to be some sort of clue, you should take it so you can look at it again later.`,
          isTakeable: true
         }
          
   ],
       desc: `
-        You approach a bench, it's super comfy looking, for a bench at least. You take a closer look at the bench and notice there's a rock on it with some words etched into it... strange.
+        You approach a bench, it's super comfy looking, for a bench at least. You take a closer look and notice there's a rock on it with some words etched into it... strange.
   
         Do you take action here or go East, West, North or South?
       `,
@@ -128,8 +126,25 @@ Do you go East, West, North or South?
         ||   (_)   __..-'
          \\__..--""
          `,
+      items: [        
+        { name: 'mask', 
+           use: ({disk, println, getRoom, enterRoom}) => {
+            const room = getRoom(disk.roomId);
+            if (room.id == 'ogPlatform') {
+            println('Now that you have your mask equipped, the train conductor gestures for you to enter the train... you step inside.');
+            enterRoom('fhPlatform');
+            return;
+          }  
+             else {
+            println('You try putting the mask on your face but it falls back into your inventory, it seems to only be usable in a certain location... weird');
+            return;
+          }
+        },
+        isTakeable: true}
+  ],
       desc: `
-        You enter Ruggles Pizza & Cafe! So yum!
+        You enter Ruggles Pizza & Cafe! So yum! There's a box of disposable face masks on the counter.
+        
         Do you take action here or go East, West, North or South?
 
       `,
