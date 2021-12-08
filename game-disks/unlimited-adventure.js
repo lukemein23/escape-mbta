@@ -317,8 +317,11 @@ ____
       `,
        items: [        
         { name: 'RoboButton', 
-           use: ({println}) => {
-            println('RoboButton is out of commission... beep beep beep.')
+         
+           use: ({disk, println, getRoom}) => {
+            const room = getRoom(disk.roomId);
+            if (room.id == 'car')
+            println('RoboButton is out of commission... beep beep beep.');
             return;
         },
         },
