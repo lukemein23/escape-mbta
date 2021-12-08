@@ -443,7 +443,7 @@ ____
       items: [               
         { name: 'dollar',
            desc: 'It`s a regular old U.S. dollar bill.',
-          use: ({disk, getRoom, getItem, println, enterRoom}) => {
+          use: ({disk, getRoom, println, enterRoom}) => {
             const room = getRoom(disk.roomId);          
              if (room.id == 'performer' && disk.inventory.length > 3) {
              println('You place the dollar in the performer`s hat and he hands you a Charlie Card with unlimited value... He also snaps his fingers and a section of the wall next to him gives way to a hidden passage... You step through this entryway.');
@@ -642,7 +642,13 @@ ____
             {
       name: 'Ticket Booth Interior',
       id: 'boothInterior',
-      img: ``,
+      img: `
+          ---
+        |     |
+        |     |
+        |     |
+          --- 
+      `,
       items: [        
         { name: 'note', 
            desc: `You take a look at the note...
@@ -671,31 +677,17 @@ ____
                 {
       name: 'Game Won!',
       id: 'gameWin',
-      img: ``,
-      items: [        
-        { name: 'note', 
-           desc: `You take a look at the note...
-            
-            "The first word of the correct platform can be found in the first word of the incorrect platform."
-            
-            This seems to be some sort of clue, you should take it so you can look at it again later.
-            
-            Type "go exit" to step outside of the ticket booth`,
-         isTakeable: true
-        }
-         
-  ],
-      desc: `
-        Here you are, inside the ticket booth. It's more or less what you expected, nothing to write home about.
-        
-        You do a 360 spin to take in the room and, just as you're about to finish your investigative pirouette, you notice a really cool note taped to a desk. 
-        
-        Do you take action here or go East, West, North or South?
+      img: `
+    ^      *     ^
+      ~      *
+          ~   ^ ~
+       *  ^        ^
+       `,
 
-      `,
-      exits: [
-        { dir: 'exit', id: 'tixBooth' }
-      ]
+      desc: `You've escaped the MBTA and beat the game! Good job!
+      
+      Please refresh the page if you'd like to play again.`,
+
     },
   ], 
 };
