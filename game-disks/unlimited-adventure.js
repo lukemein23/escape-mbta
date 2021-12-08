@@ -23,10 +23,6 @@ Type "go escape" to begin your journey.
     {
       name: 'Ruggles',
       id: 'gameStart',
-      onEnter: ({disk, println, play, getRoom, enterRoom}) => {
-        var audio = new Audio('assets/esm_8_bit_small_win_arcade_80s_simple_alert_notification_game.mp3');
-        audio.play('assets/esm_8_bit_small_win_arcade_80s_simple_alert_notification_game.mp3');
-    return;}, 
       img: `
 ____
 |R |____T_
@@ -448,16 +444,14 @@ ____
         { name: 'dollar',
            desc: 'It`s a regular old U.S. dollar bill.',
           use: ({disk, getRoom, getItem, println, enterRoom}) => {
-            const room = getRoom(disk.roomId);
-            // if (room.id == 'performer' && disk.inventory.includes(getItem('quarter')) && disk.inventory.includes(getItem('frisbee')) && disk.inventory.includes(getItem('token'))) {
-            // println('You place the dollar in the performer`s hat and he hands you a Charlie Card with unlimited value... He also snaps his fingers and a section of the wall next to him gives way to a hidden passage... You step through this entryway.');
-            // enterRoom('gameWin');
-            // return;
-            // }
-            // else
-               if (room.id == 'performer') {
-               println('hoii');
-               //println('As you go to place the the dollar in the performer`s hat, he stops you and tells you this: "I will not accept your bill until you have obtained three objects whose colors play a large role in this station."');
+            const room = getRoom(disk.roomId);          
+             if (room.id == 'performer' && disk.inventory.length > 3) {
+             println('You place the dollar in the performer`s hat and he hands you a Charlie Card with unlimited value... He also snaps his fingers and a section of the wall next to him gives way to a hidden passage... You step through this entryway.');
+             enterRoom('gameWin');
+             return;
+             }
+             else if (room.id == 'performer') {
+               println('As you go to place the the dollar in the performer`s hat, he stops you and tells you this: "I will not accept your bill until you`ve truly taken more of what this station has to offer you."');
                return;
              }
             else {
@@ -625,7 +619,7 @@ ____
         { name: 'advertisement', 
          desc: `You take a closer look at the writing on the advertisement...
          
-         "You inventory is lacking in shapes with no sides."
+         "It's all about how much you've got."
          
          This seems like some sort of clue. It would be a risky move to dismount this ad from the wall and stash it in your inventory... but it's definitely a possible and understandable option if you want to look at it later.
          `,
