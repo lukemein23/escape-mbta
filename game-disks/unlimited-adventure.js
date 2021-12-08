@@ -54,7 +54,8 @@ Do you go East, West, North or South?
       `,
       desc: `
         You walk toward the Charlie Card Refill Stations.
-        Do you take an action here or go East, West, North or South?
+        
+        Do you take action here or go East, West, North or South?
       `,
       exits: [
         { dir: 'west', id: 'gameStart' },
@@ -67,10 +68,12 @@ Do you go East, West, North or South?
       name: 'Bench',
       id: 'bench',
       img: `
+      
       ____  ____  __ _   ___  _  _ 
      (  _ \(  __)(  ( \ / __)/ )( \
       ) _ ( ) _) /    /( (__ ) __ (
      (____/(____)\_)__) \___)\_)(_/
+      
       `,
       items: [        
         { name: 'rock', 
@@ -128,6 +131,9 @@ Do you go East, West, North or South?
          `,
       items: [        
         { name: 'mask', 
+           desc: `
+           
+           `,
            use: ({disk, println, getRoom, enterRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'ogPlatform') {
@@ -190,6 +196,9 @@ Do you go East, West, North or South?
       `,
       items: [        
         { name: 'key', 
+           desc: `
+           It's a shiny key with a blue tint, so neat!
+           `,
            use: ({disk, println, getRoom, enterRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'tixBooth') {
@@ -206,6 +215,7 @@ Do you go East, West, North or South?
   ],
       desc: `
          You stand in front of Dunkin Donuts and the aroma of coffee floods your senses. 
+         
          You see something shiny near amidst the French crullers... upon further inspection you discover it's a key!
          
          Do you take action here or go East, West, North or South?
@@ -225,7 +235,12 @@ ____
   @-@-@-oo\
 `,
       desc: `
-         You end up on the Oak Grove platform, the train's coming soon!
+         You walk onto the Oak Grove platform - the train's here!
+         
+         The conductor tells you:
+         
+         "If you wanna board this train, you'd better wear a mask!"
+         
          Do you take action here or go East, West, North or South?
       `,
       exits: [
@@ -244,7 +259,7 @@ ____
   @-@-@-oo\
 `,
       desc: `
-         You end up on the Oak Grove platform, the train's coming soon!
+         You end up on the Forest Hills platform, it's pretty neat!
          Do you take action here or go East, West, North or South?
          
       `,
@@ -431,7 +446,7 @@ ____
         { name: 'dollar',
           use: ({disk, getRoom, getItem, println, enterRoom}) => {
             const room = getRoom(disk.roomId);
-            if (room.id == 'performer' && disk.inventory.includes(getItem('qu')) && disk.inventory.includes('frisbee') && disk.inventory.includes('token')) {
+            if (room.id == 'performer' && disk.inventory.includes(getItem('quarter')) && disk.inventory.includes(getItem('frisbee')) && disk.inventory.includes(getItem('token'))) {
             println('You place the dollar in the performer`s hat and he hands you a Charlie Card with unlimited value... He also snaps his fingers and a section of the wall next to him gives way to a hidden passage... You step through this entryway.');
             enterRoom('gameWin');
             return;
@@ -461,10 +476,12 @@ ____
       name: 'West Hallway',
       id: 'westHall',
       img: `
+      
        _  _  ____  ____  ____ 
       / )( \(  __)/ ___)(_  _)
       \ /\ / ) _) \___ \  )(  
       (_/\_)(____)(____/ (__) 
+      
       `,
       items: [               
         { name: 'token', 
@@ -485,7 +502,7 @@ ____
       ]
     },
     {
-      name: 'Charlie Card Station',
+      name: 'Charlie Card Station (Downtown Crossing)',
       id: 'ccStation2',
       img: `
      -----------
@@ -514,7 +531,8 @@ ____
         {
       name: 'Performer',
       id: 'performer',
-              img: `    _   __
+              img: `
+                        _   __
         ___________/| o/  o/o/
          (__|||__) \|        
               `,
@@ -553,7 +571,7 @@ ____
       `,
       exits: [
         { dir: 'east', id: 'southHall' },
-        { dir: 'north', id: 'slPlatform' }
+        { dir: 'north', id: 'westHall' }
       ]
     },
         {
@@ -637,6 +655,7 @@ ____
   ],
       desc: `
         Here you are, inside the ticket booth. It's more or less what you expected, nothing to write home about.
+        
         You do a 360 spin to take in the room and, just as you're about to finish your investigative pirouette, you notice a really cool note taped to a desk. 
         
         Do you take action here or go East, West, North or South?
