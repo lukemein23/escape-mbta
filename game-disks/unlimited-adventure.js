@@ -431,7 +431,7 @@ ____
         { name: 'dollar',
           use: ({disk, getRoom, getItem, println, enterRoom}) => {
             const room = getRoom(disk.roomId);
-            if (room.id == 'performer' && disk.inventory.includes(quarter.name) && disk.inventory.includes('frisbee') && disk.inventory.includes('token')) {
+            if (room.id == 'performer' && disk.inventory.includes(getItem('qu')) && disk.inventory.includes('frisbee') && disk.inventory.includes('token')) {
             println('You place the dollar in the performer`s hat and he hands you a Charlie Card with unlimited value... He also snaps his fingers and a section of the wall next to him gives way to a hidden passage... You step through this entryway.');
             enterRoom('gameWin');
             return;

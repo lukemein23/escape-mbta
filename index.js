@@ -1,3 +1,4 @@
+// this file is mainly unchanged from the index.js file from Dive The Game: https://glitch.com/~dive-the-game
 const loadDisk = (disk, config = {}) => {
   // build default (DOM) configuration
   const defaults = {
@@ -63,6 +64,17 @@ const loadDisk = (disk, config = {}) => {
 
   // String -> Room
   const getRoom = (id) => disk.rooms.find(room => room.id === id);
+
+  // The following chunk of code was pulled directly from text-engine: https://github.com/okaybenji/text-engine/blob/master/index.js
+  const getItem = (name) => disk.inventory.find(item => objectHasName(item, name));
+
+  const objectHasName = (obj, name) => {
+  const compareNames = n => n.toLowerCase().includes(name.toLowerCase());
+
+  return Array.isArray(obj.name)
+    ? obj.name.find(compareNames)
+    : compareNames(obj.name);
+}
 
   const enterRoom = (id) => {
     const room = getRoom(id);
