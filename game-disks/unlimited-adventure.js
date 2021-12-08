@@ -316,21 +316,7 @@ ____
        
       `,
        items: [        
-                { name: 'key2', 
-           use: ({disk, println, getRoom, enterRoom}) => {
-            const room = getRoom(disk.roomId);
-            if (room.id == 'tixBooth') {
-            println('You have unlocked the ticket booth, you step inside...');
-            enterRoom('boothInterior');
-            return;
-          }  
-             else {
-            println('There is nothing to unlock here.');
-            return;
-          }
-        },
-        isTakeable: true},
-         { name: 'RoboButton', 
+         { name: 'robobutton', 
            use: ({disk, println, getRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'car3') {
@@ -343,7 +329,7 @@ ____
              }
         }
         },
-         { name: 'MegaButton', 
+         { name: 'megabutton', 
            use: ({disk, getRoom, println}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'car3') {
@@ -356,7 +342,7 @@ ____
              }
         }
         },
-         { name: 'Buttonator', 
+         { name: 'buttonator', 
            use: ({disk, getRoom, println, enterRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'car3') {
@@ -377,7 +363,7 @@ ____
         
         There are three buttons available for use, they're labeled with cute names too...
         
-        You take a closer look at the buttons, there's "RoboButton," which would send a request to stop at Haymarket, "Buttonator," which would send a request to stop at Downtown Crossing, and "MegaButton," which would send a request to stop at Tufts Medical Center.
+        You take a closer look at the buttons, there's "robobutton," which would send a request to stop at Haymarket, "buttonator," which would send a request to stop at Downtown Crossing, and "megabutton," which would send a request to stop at Tufts Medical Center.
         
         Do you take action here or go East, West, North or South?
 
@@ -477,7 +463,7 @@ ____
      -----------
       `,
       desc: `
-        Welcome to the second train car.
+        You approach a set of Charlie Card Stations.
         Do you take action here or go East, West, North or South?
 
       `,
@@ -496,7 +482,7 @@ ____
          (__|||__) \|        
               `,
       desc: `
-        Welcome to the second train car.
+        You walk towards someone performing.
         Do you take action here or go East, West, North or South?
 
       `,
