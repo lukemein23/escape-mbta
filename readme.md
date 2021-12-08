@@ -6,7 +6,7 @@ _scroll for game info_
 
 ## The Game
 
-Explore the Ruggles train station and embark on a journey to find the hidden treasure, all under an interactive escape room setting!
+Explore the Ruggles train station and embark on a journey to find the hidden treasure and escape the MBTA, all under an interactive escape room setting!
 This digital escape room was designed by Abbie Tyler, Luke Meininger, Lulwa Alghanim, and Zakiya Sheikh.
 It is inspired by “dive the game” which is an underwater diving game we remixed on glitch.
 We hope you have as much fun playing as we did designing the game!
@@ -17,15 +17,50 @@ We hope you have as much fun playing as we did designing the game!
 
 This game consists of 21 rooms, which can be navigated through cardinal directions (NORTH, EAST, WEST, SOUTH).
 As you progress throughout the game, you will find interactive objects that you may use to your benefit.
-Each room contains hints to help you escape either the same room or another locked room.
-The hints may also help guide you through the map, but you must lead the path by solving unique puzzles designed specifically for your current setting.
-Once you have escaped, your next goal is to find the hidden treasure.
+Hints are embedded in some objects to help you move you forward in the interactive narrative.
+There are three "stages" in the game: Ruggles, The Oak Grove Train, and the Downtown Crossing station.
+The goal of the game is to escape the final stage, which will earn the player an unlimited Charlie Card.
 
 ### What is it?
 
 A JavaScript REPL-style text-based adventure game engine, based on the [text-engine](https://github.com/okaybenji/text-engine) library, available on [npm](https://www.npmjs.com/package/text-engine) too -- see [text-engine-node](https://github.com/okaybenji/text-engine-node) for further info.
 
 Text-engine has been adapted for the purposes of this specific game.
+
+### Walkthrough (to beat the game)
+
+go escape
+
+go north
+
+take mask
+
+go south
+
+go south
+
+go east
+
+use mask
+
+go east
+
+go east
+
+use buttonator
+
+go east
+
+take quarter
+
+go east
+
+take dollar
+
+go south
+
+go east
+
 
 ### Built by
 
