@@ -315,12 +315,27 @@ ____
          /O-O-O     o   o     o  o
        
       `,
+       items: [        
+        { name: 'RoboButton', 
+           use: ({println}) => {
+            println('RoboButton is out of commission... beep beep beep.')
+            return;
+        },
+        },
+         { name: 'MegaButton', 
+           use: ({println}) => {
+            println('Upon pressing MegaButton you realize its not actually a button at all, just a soda bottle cap masquerading as a button... MegaButton? More like MegaPoser.');
+            return;
+        },
+        }
+         
+  ],
       desc: `
         Welcome to the third train car. It seems they've switched up their system...
         
         There are three buttons available for use, they're labeled with cute names too...
         
-        You take a closer look at the buttons, theres 
+        You take a closer look at the buttons, there's "RoboButton," which would send a request to stop at Haymarket, "Buttonator," which would send a request to stop at Downtown Crossing, and "MegaButton," which would send a request to stop at Tufts Medical Center.
         
         Do you take action here or go East, West, North or South?
 
