@@ -185,6 +185,7 @@ Do you go East, West, North or South?
             const room = getRoom(disk.roomId);
             if (room.id == 'tixBooth') {
             println('You have unlocked the ticket booth, you step inside...');
+            enterRoom('boothInterior');
             return;
           }  
              else {
@@ -195,7 +196,9 @@ Do you go East, West, North or South?
         isTakeable: true}
   ],
       desc: `
-         You stand in front of Dunkin Donuts and the aroma of coffee floods your senses.
+         You stand in front of Dunkin Donuts and the aroma of coffee floods your senses. 
+         You see something shiny near amidst the French crullers... upon further inspection you discover it's a key!
+         
          Do you take action here or go East, West, North or South?
       `,
       exits: [
@@ -490,6 +493,22 @@ ____
      `,
       desc: `
         You're standing in front of the escalators leading up to the street.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'west', id: 'southHall' },
+        { dir: 'north', id: 'performer'}
+      ]
+    },
+            {
+      name: 'Ticket Booth Interior',
+      id: 'boothInterior',
+      img: ``,
+      desc: `
+        Here you are, inside the ticket booth. It's more or less what you expected, nothing to write home about.
+        
+        
         Do you take action here or go East, West, North or South?
 
       `,
