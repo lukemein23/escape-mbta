@@ -215,7 +215,12 @@ Do you go East, West, North or South?
     {
       name: 'Bench',
       id: 'bench',
-      img: '',
+      img: `
+      ____  ____  __ _   ___  _  _ 
+     (  _ \(  __)(  ( \ / __)/ )( \
+      ) _ ( ) _) /    /( (__ ) __ (
+     (____/(____)\_)__) \___)\_)(_/
+      `,
       desc: `
         You approach a bench, it's super comfy looking, for a bench at least.
         Do you take action here or go East, West, North or South?
@@ -272,7 +277,12 @@ Do you go East, West, North or South?
     {
       name: 'Bench',
       id: 'bench',
-      img: '',
+      img:`
+      ____  ____  __ _   ___  _  _ 
+     (  _ \(  __)(  ( \ / __)/ )( \
+      ) _ ( ) _) /    /( (__ ) __ (
+     (____/(____)\_)__) \___)\_)(_/
+      `,
       desc: `
         You come across a bench! Good job, it's a really neat bench as far as train station benches go. 
         Do you take action here or go East, West, North or South?
@@ -523,24 +533,29 @@ ____
 
       `,
       exits: [
-        { dir: 'east', id: 'bench' },
-        { dir: 'north', id: 'escalator' }
+        { dir: 'east', id: 'northHall' },
+        { dir: 'south', id: 'westHall' }
         
       ]
     },
     {
       name: 'North Hallway',
       id: 'northHall',
-      img: ``,
+      img: `
+       __ _   __  ____  ____  _  _ 
+      (  ( \ /  \(  _ \(_  _)/ )( \
+      /    /(  O ))   /  )(  ) __ (
+      \_)__) \__/(__\_) (__) \_)(_/
+      `,
       desc: `
         You enter Ruggles Pizza & Cafe! So yum!
         Do you take action here or go East, West, North or South?
 
       `,
       exits: [
-        { dir: 'east', id: 'dunkinDonuts' },
-        { dir: 'west', id: 'tixBooth' },
-        { dir: 'south', id: 'gameStart' }     
+        { dir: 'east', id: 'rlPlatform' },
+        { dir: 'west', id: 'olPlatform' },
+        { dir: 'south', id: 'ccStation2' }     
       ]
     },
     {
@@ -558,7 +573,8 @@ ____
 
       `,
       exits: [
-        { dir: 'east', id: 'car2' }  
+        { dir: 'west', id: 'northHall' },
+        { dir: 'south', id: 'performer'}
       ]
     },
     {
@@ -572,7 +588,7 @@ ____
       `,
       exits: [
         { dir: 'west', id: 'trainIntro' }, 
-        { dir: 'east', id: 'car3' },  
+        { dir: 'east', id: '' },  
       ]
     },
     {
@@ -597,7 +613,10 @@ ____
         {
       name: 'Performer',
       id: 'performer',
-      img: ``,
+              img: `    _   __
+        ___________/| o/  o/o/
+         (__|||__) \|        
+              `,
       desc: `
         Welcome to the second train car.
         Do you take action here or go East, West, North or South?
@@ -610,7 +629,12 @@ ____
         {
       name: 'Silver Line Platform',
       id: 'slPlatform',
-      img: ``,
+      img: `
+      ____
+      |Sl|____T_
+      |_ |_____|<
+        @-@-@-oo\
+`,
       desc: `
         Welcome to the second train car.
         Do you take action here or go East, West, North or South?
@@ -636,7 +660,13 @@ ____
         {
       name: 'Escalator',
       id: 'escalator2',
-      img: ``,
+      img: `
+           ---
+          |
+        --
+       |
+     --
+     `,
       desc: `
         Welcome to the second train car.
         Do you take action here or go East, West, North or South?
