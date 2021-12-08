@@ -511,7 +511,12 @@ ____
         {
       name: 'Orange Line Platform',
       id: 'olPlatform',
-      img: ``,
+      img: `
+      ____
+      |O |____T_
+      |_ |_____|<
+        @-@-@-oo\
+`,
       desc: `
          You end up on the Oak Grove platform, the train's coming soon!
          Do you take action here or go East, West, North or South?
@@ -541,7 +546,12 @@ ____
     {
       name: 'Red Line Platform',
       id: 'rlPlatform',
-      img: ``,
+      img: `
+      ____
+      |R |____T_
+      |_ |_____|<
+        @-@-@-oo\
+`,
       desc: `
         You've made it to the second stage of the game - the train to Oak Grove!
         Do you take action here or go East, West, North or South?
@@ -568,7 +578,13 @@ ____
     {
       name: 'Charlie Card Station',
       id: 'ccStation2',
-      img: ``,
+      img: `
+     -----------
+    |    ---    |
+    |   |       |
+    |    ---    |
+     -----------
+      `,
       desc: `
         Welcome to the second train car.
         Do you take action here or go East, West, North or South?
@@ -618,8 +634,8 @@ ____
       ]
     },
         {
-      name: 'Charlie Card Station',
-      id: 'ccStation2',
+      name: 'Escalator',
+      id: 'escalator2',
       img: ``,
       desc: `
         Welcome to the second train car.
