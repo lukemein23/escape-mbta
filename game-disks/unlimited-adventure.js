@@ -68,12 +68,10 @@ Do you go East, West, North or South?
       name: 'Bench',
       id: 'bench',
       img: `
-      
-      ____  ____  __ _   ___  _  _ 
-     (  _ \(  __)(  ( \ / __)/ )( \
-      ) _ ( ) _) /    /( (__ ) __ (
-     (____/(____)\_)__) \___)\_)(_/
-      
+     -----------
+    |           |
+    |-----------|
+    |           |            
       `,
       items: [        
         { name: 'rock', 
@@ -131,9 +129,7 @@ Do you go East, West, North or South?
          `,
       items: [        
         { name: 'mask', 
-           desc: `
-           
-           `,
+           desc: `It's a typical disposable face mask, it's not a KN95 but it'll get the job done.`,
            use: ({disk, println, getRoom, enterRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'ogPlatform') {
@@ -196,9 +192,7 @@ Do you go East, West, North or South?
       `,
       items: [        
         { name: 'key', 
-           desc: `
-           It's a shiny key with a blue tint, so neat!
-           `,
+           desc: `It's a shiny key with a blue tint, so neat!`,
            use: ({disk, println, getRoom, enterRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'tixBooth') {
@@ -332,6 +326,7 @@ ____
       `,
        items: [        
          { name: 'robobutton', 
+            desc: 'Upon further inspection it appears that robobutton has an intricate geometric design all over it - how cool!',
            use: ({disk, println, getRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'car3') {
@@ -345,6 +340,7 @@ ____
         }
         },
          { name: 'megabutton', 
+            desc: 'You take a look at megabutton... something seems amiss.',
            use: ({disk, getRoom, println}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'car3') {
@@ -358,6 +354,7 @@ ____
         }
         },
          { name: 'buttonator', 
+          desc: 'Buttonator is such a cool button! Nothing more to say about it!',
            use: ({disk, getRoom, println, enterRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'car3') {
@@ -416,9 +413,11 @@ ____
       (  ( \ /  \(  _ \(_  _)/ )( \
       /    /(  O ))   /  )(  ) __ (
       \_)__) \__/(__\_) (__) \_)(_/
+      
       `,
       items: [               
         { name: 'quarter', 
+         desc: 'You flip over the quarter and it`s one of those ones that people collect! With a national park on the back... this one is from California. This gets you thinking about taking a trip to Yosemite... but you have other priorities right now.',
          isTakeable: true
         }         
   ],
@@ -444,6 +443,7 @@ ____
 `,     
       items: [               
         { name: 'dollar',
+           desc: 'It`s a regular old U.S. dollar bill.',
           use: ({disk, getRoom, getItem, println, enterRoom}) => {
             const room = getRoom(disk.roomId);
             if (room.id == 'performer' && disk.inventory.includes(getItem('quarter')) && disk.inventory.includes(getItem('frisbee')) && disk.inventory.includes(getItem('token'))) {
@@ -484,8 +484,8 @@ ____
       
       `,
       items: [               
-        { name: 'token', 
-         
+        { name: 'token',
+         desc: 'You`ve never seen anything so red and circular.',         
          isTakeable: true
         }         
   ],
@@ -513,6 +513,7 @@ ____
       `,
       items: [               
         { name: 'plush', 
+         desc: `This plush is so soft-looking!`,
          isTakeable: true
         }         
   ],
@@ -560,7 +561,11 @@ ____
         @-@-@-oo\
 `,
       items: [               
-        { name: 'figurine', 
+        { name: 'figurine',
+         desc: `It's a figurine of Peter Chermayeff, an architect who was crucial in the MBTA's redesign process.
+         
+         (Psst... here's a link if you want to learn more: https://podcast.andover.edu/2019/02/12/episode-24-architect-peter-chermayeff-53/)
+         `,
          isTakeable: true
         }         
   ],
@@ -578,13 +583,16 @@ ____
       name: 'South Hallway',
       id: 'southHall',
       img: `
+      
        ____   __   _  _  ____  _  _ 
       / ___) /  \ / )( \(_  _)/ )( \
       \___ \(  O )) \/ (  )(  ) __ (
       (____/ \__/ \____/ (__) \_)(_/
+      
       `,
       items: [               
         { name: 'frisbee', 
+         desc: 'This frisbee definitely catches some speed when tossed.',
          isTakeable: true
         }         
   ],
@@ -611,6 +619,7 @@ ____
      `,
       items: [               
         { name: 'cube', 
+         desc: 'This cube has almost no features aside from being green and a cube... huh.',
          isTakeable: true
         },
         { name: 'advertisement', 
