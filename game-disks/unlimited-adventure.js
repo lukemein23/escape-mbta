@@ -505,9 +505,16 @@ ____
       name: 'Ticket Booth Interior',
       id: 'boothInterior',
       img: ``,
+      items: [        
+        { name: 'note', 
+           onLook: ({println}) => {
+            println("")
+        },
+        isTakeable: true}
+  ],
       desc: `
         Here you are, inside the ticket booth. It's more or less what you expected, nothing to write home about.
-        
+        You do a 360 spin to take in the room and, just as you're about to finish your investigative pirouette, you notice a really cool note taped to a desk. 
         
         Do you take action here or go East, West, North or South?
 
