@@ -437,9 +437,12 @@ ____
             return;
             }
              else if (room.id == 'performer') {
-               println('As yo
+               println('As you go to place the the dollar in the performer`s hat, he stops you and tells you this: "I will not accept your bill until you have obtained three objects of whose colors play a large role in this station."');
                return;
              }
+            else {
+              println('You pull the dollar out and look at it... it`s a pretty classic bill... You put it back in your inventory.')
+            }
         },
          isTakeable: true
         }         
@@ -591,10 +594,22 @@ ____
       items: [               
         { name: 'cube', 
          isTakeable: true
-        }         
+        },
+        { name: 'advertisement', 
+         desc: `You take a closer look at the writing on the advertisement...
+         
+         "You inventory is lacking in shapes with no sides."
+         
+         This seems like some sort of clue. It would be a risky move to dismount this ad from the wall and stash it in your inventory... but it's definitely a possible and understandable option if you want to 
+         
+         `,
+         isTakeable: true
+        }  
   ],
       desc: `
         You're standing in front of the escalators leading up to the street. You notice a green cube sitting off to the side.
+        
+        You also notice an advertisement... there's something written in neon marker in the corner.
         
         Do you take action here or go East, West, North or South?
 
