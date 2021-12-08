@@ -132,7 +132,7 @@ Do you go East, West, North or South?
             const room = getRoom(disk.roomId);
             if (room.id == 'ogPlatform') {
             println('Now that you have your mask equipped, the train conductor gestures for you to enter the train... you step inside.');
-            enterRoom('fhPlatform');
+            enterRoom('trainIntro');
             return;
           }  
              else {
@@ -325,6 +325,13 @@ ____
          { name: 'MegaButton', 
            use: ({println}) => {
             println('Upon pressing MegaButton you realize its not actually a button at all, just a soda bottle cap masquerading as a button... MegaButton? More like MegaPoser.');
+            return;
+        },
+        },
+         { name: 'Buttonator', 
+           use: ({println, enterRoom}) => {
+            println('You press Buttonator and the floor turns bright green... after about forty seconds the train doors open and you step into the Downtown Crossing Station.');
+            enterRoom('olPlatform');
             return;
         },
         }
