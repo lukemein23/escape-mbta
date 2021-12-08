@@ -25,7 +25,7 @@ Type "go escape" to begin your journey.
       id: 'gameStart',
       onEnter: ({disk, println, play, getRoom, enterRoom}) => {
         var audio = new Audio('assets/esm_8_bit_small_win_arcade_80s_simple_alert_notification_game.mp3');
-        audio.play();
+        audio.play('assets/esm_8_bit_small_win_arcade_80s_simple_alert_notification_game.mp3');
     return;}, 
       img: `
 ____

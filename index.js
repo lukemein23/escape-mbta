@@ -20,10 +20,6 @@ const loadDisk = (disk, config = {}) => {
       output.appendChild(newLine).innerText = str;
       output.scrollTop = output.scrollHeight;
     },
-    play: (str) => {
-        var audio = new Audio(str);
-        audio.play();
-    },
     // prepare the environment
     setup: ({applyInput = (() => {}), navigateHistory = (() => {})}) => {
       const inputBox = document.querySelector('#input');
@@ -48,7 +44,7 @@ const loadDisk = (disk, config = {}) => {
     }
   };
 
-  const {getInput, setInput, println, play, setup} = Object.assign(defaults, config);
+  const {getInput, setInput, println, setup} = Object.assign(defaults, config);
 
   // Disk -> Disk
   const init = (disk) => {
@@ -94,10 +90,6 @@ const loadDisk = (disk, config = {}) => {
     room.visits++;
 
     disk.roomId = id;
-    
-    if (typeof room.onEnter === 'function') {
-    room.onEnter({disk, println, play, getRoom, enterRoom});
-  }
   };
 
   const startGame = (disk) => {
