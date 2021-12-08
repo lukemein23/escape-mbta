@@ -508,5 +508,127 @@ ____
         { dir: 'west', id: 'car2' }
       ]
     },
+        {
+      name: 'Orange Line Platform',
+      id: 'olPlatform',
+      img: ``,
+      desc: `
+         You end up on the Oak Grove platform, the train's coming soon!
+         Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'east', id: 'bench' },
+        { dir: 'north', id: 'escalator' }
+        
+      ]
+    },
+    {
+      name: 'North Hallway',
+      id: 'northHall',
+      img: ``,
+      desc: `
+        You enter Ruggles Pizza & Cafe! So yum!
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'east', id: 'dunkinDonuts' },
+        { dir: 'west', id: 'tixBooth' },
+        { dir: 'south', id: 'gameStart' }     
+      ]
+    },
+    {
+      name: 'Red Line Platform',
+      id: 'rlPlatform',
+      img: ``,
+      desc: `
+        You've made it to the second stage of the game - the train to Oak Grove!
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'east', id: 'car2' }  
+      ]
+    },
+    {
+      name: 'West Hallway',
+      id: 'westHall',
+      img: ``,
+      desc: `
+        Welcome to the second train car.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'west', id: 'trainIntro' }, 
+        { dir: 'east', id: 'car3' },  
+      ]
+    },
+    {
+      name: 'Charlie Card Station',
+      id: 'ccStation2',
+      img: ``,
+      desc: `
+        Welcome to the second train car.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'west', id: 'car2' }
+      ]
+    },
+        {
+      name: 'Performer',
+      id: 'performer',
+      img: ``,
+      desc: `
+        Welcome to the second train car.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'west', id: 'car2' }
+      ]
+    },
+        {
+      name: 'Silver Line Platform',
+      id: 'slPlatform',
+      img: ``,
+      desc: `
+        Welcome to the second train car.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'west', id: 'car2' }
+      ]
+    },
+        {
+      name: 'South Hallway',
+      id: 'southHall',
+      img: ``,
+      desc: `
+        Welcome to the second train car.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'west', id: 'car2' }
+      ]
+    },
+        {
+      name: 'Charlie Card Station',
+      id: 'ccStation2',
+      img: ``,
+      desc: `
+        Welcome to the second train car.
+        Do you take action here or go East, West, North or South?
+
+      `,
+      exits: [
+        { dir: 'west', id: 'car2' }
+      ]
+    },
   ], 
 };
