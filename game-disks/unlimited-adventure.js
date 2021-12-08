@@ -507,14 +507,12 @@ ____
       img: ``,
       items: [        
         { name: 'note', 
-           look: ({println}) => {
-            println(`You take a look at the note...
+           desc: `You take a look at the note...
             
             "The first word of the correct platform can be found in the first word of the incorrect platform."
             
-            This seems to be some sort of clue`)
-             return;
-        }
+            This seems to be some sort of clue`,
+         isTakeable: true
         }
          
   ],
