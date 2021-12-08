@@ -648,7 +648,7 @@ ____
         @-@-@-oo\
 `,
       desc: `
-        Welcome to the second train car.
+        You step onto the Silver Line platform.
         Do you take action here or go East, West, North or South?
 
       `,
