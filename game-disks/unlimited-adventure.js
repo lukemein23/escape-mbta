@@ -442,7 +442,7 @@ ____
       (_/\_)(____)(____/ (__) 
       `,
       desc: `
-        You step into a wide hallway.
+        You step into a wide hallway. You see a red token on the ground.
         
         Do you take action here or go East, West, North or South?
 
