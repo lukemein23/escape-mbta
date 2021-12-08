@@ -510,7 +510,7 @@ ____
        
       `,
       desc: `
-        Welcome to the second train car.
+        Welcome to the third train car.
         Do you take action here or go East, West, North or South?
 
       `,
@@ -528,7 +528,8 @@ ____
         @-@-@-oo\
 `,
       desc: `
-         You end up on the Oak Grove platform, the train's coming soon!
+         You've made it to the third stage of the game - Downtown Crossing!
+         You step out onto the Orange Line platform.
          Do you take action here or go East, West, North or South?
 
       `,
@@ -548,7 +549,7 @@ ____
       \_)__) \__/(__\_) (__) \_)(_/
       `,
       desc: `
-        You enter Ruggles Pizza & Cafe! So yum!
+        You step into a wide hallway.
         Do you take action here or go East, West, North or South?
 
       `,
@@ -568,7 +569,7 @@ ____
         @-@-@-oo\
 `,
       desc: `
-        You've made it to the second stage of the game - the train to Oak Grove!
+        You step onto the Red Line platform.
         Do you take action here or go East, West, North or South?
 
       `,
@@ -580,15 +581,21 @@ ____
     {
       name: 'West Hallway',
       id: 'westHall',
-      img: ``,
+      img: `
+       _  _  ____  ____  ____ 
+      / )( \(  __)/ ___)(_  _)
+      \ /\ / ) _) \___ \  )(  
+      (_/\_)(____)(____/ (__) 
+      `,
       desc: `
-        Welcome to the second train car.
+        You step into a wide hallway.
         Do you take action here or go East, West, North or South?
 
       `,
       exits: [
-        { dir: 'west', id: 'trainIntro' }, 
-        { dir: 'east', id: '' },  
+        { dir: 'north', id: 'olPlatform' }, 
+        { dir: 'east', id: 'ccStation2' },  
+        { dir: 'south', id: 'slPlatform' }
       ]
     },
     {
@@ -607,7 +614,10 @@ ____
 
       `,
       exits: [
-        { dir: 'west', id: 'car2' }
+        { dir: 'west', id: 'westHall' },
+        { dir: 'east', id: 'performer' },
+        { dir: 'south', id: 'southHall' },
+        { dir: 'north', id: 'northHall' }
       ]
     },
         {
@@ -623,7 +633,9 @@ ____
 
       `,
       exits: [
-        { dir: 'west', id: 'car2' }
+        { dir: 'north', id: 'rlPlatform' },
+        { dir: 'west', id: 'ccStation2' },
+        { dir: 'south', id: 'escalator2' }
       ]
     },
         {
@@ -641,20 +653,28 @@ ____
 
       `,
       exits: [
-        { dir: 'west', id: 'car2' }
+        { dir: 'east', id: 'southHall' },
+        { dir: 'north', id: 'slPlatform' }
       ]
     },
         {
       name: 'South Hallway',
       id: 'southHall',
-      img: ``,
+      img: `
+       ____   __   _  _  ____  _  _ 
+      / ___) /  \ / )( \(_  _)/ )( \
+      \___ \(  O )) \/ (  )(  ) __ (
+      (____/ \__/ \____/ (__) \_)(_/
+      `,
       desc: `
-        Welcome to the second train car.
+        You step into a wide hallway.
         Do you take action here or go East, West, North or South?
 
       `,
       exits: [
-        { dir: 'west', id: 'car2' }
+        { dir: 'west', id: 'slPlatform' },
+        { dir: 'east', id: 'escalator2' },
+        { dir: 'north', id: 'ccStation' }
       ]
     },
         {
@@ -668,12 +688,13 @@ ____
      --
      `,
       desc: `
-        Welcome to the second train car.
+        You're standing in front of the escalators leading up to the street.
         Do you take action here or go East, West, North or South?
 
       `,
       exits: [
-        { dir: 'west', id: 'car2' }
+        { dir: 'west', id: 'southHall' },
+        { dir: 'north', id: 'performer'}
       ]
     },
   ], 
