@@ -246,7 +246,7 @@ ____
       desc: `
          You end up on the Oak Grove platform, the train's coming soon!
          Do you take action here or go East, West, North or South?
-
+         
       `,
       exits: [
         { dir: 'east', id: 'bench' },
